@@ -15,7 +15,7 @@ const { title, description, path = '/', ogTitle = title, ogDescription = descrip
 const site = Astro.site?.toString() ?? 'https://growthegrid.ca/';
 const url = new URL(path, site).toString();
 // Bump ?v= whenever og.png changes, so share previews fetch the new image.
-const image = new URL('/og.png?v=4', site).toString();
+const image = new URL('/og.png?v=5', site).toString();
 const imageAlt = 'Let data centres build BC’s next power plant. Email your MLA. Grow the Grid BC.';
 ---
 
