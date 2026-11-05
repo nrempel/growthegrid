@@ -110,9 +110,10 @@ Line drawings share one style: spruce strokes (pylons 2.2px), round joins and ca
 |---|---|
 | Hero | snow to ice gradient, ridge art into spruce |
 | Numbers (`#numbers`) | spruce |
-| Water (`#water`) | snow |
-| Data (`#sovereign`) | ice |
-| Deal (`#deal`) | snow |
+| Term 1 detail (`#deal`) | snow |
+| Term 2, data (`#sovereign`) | ice |
+| Term 3, water (`#water`) | snow |
+| Wins (`#wins`) | spruce (`.band-dark`, the close before the action) |
 | Act (`#act`) | ice-2 (the one deeper band: the action) |
 | FAQ (`#faq`) | snow |
 | Footer | ridge edge on snow into spruce |

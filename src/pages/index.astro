@@ -83,7 +83,7 @@ const bars = [
         <div class="wrap hero-copy">
           <h1>Let data centres build BC’s next power plant.</h1>
           <p class="lede">
-            Data centres want to build in BC. Let’s say yes, on one condition: they bring more new power than they use.
+            Data centres want to build in BC. Let’s say yes, as long as they bring more new power than they use.
             The extra goes to everyone, so BC gets a bigger grid.
           </p>
           <div class="hero-lookup">
@@ -116,12 +116,12 @@ const bars = [
                 <p class="srcs"><a href="https://www.telus.com/en/about/news-and-events/media-releases/TELUS-and-Government-of-Canada-advance-work-to-scale-Canadas-sovereign-AI-infrastructure" target="_blank" rel="noopener">TELUS</a> <a href={U.call} target="_blank" rel="noopener">BC Gov News, May 2026</a></p>
               </li>
             </ul>
-            <p class="opp-why"><strong>Why now:</strong> The new government can change the cap without a new law, and BC Hydro will pick which projects get power once the new government is in place. Ask your MLA to make sure any change comes with the terms below. <span class="srcs"><a href={U.reg} target="_blank" rel="noopener">B.C. Reg. 8/2026</a> <a href={U.cfd} target="_blank" rel="noopener">BC Hydro</a></span></p>
+            <p class="opp-why"><strong>The ask:</strong> replace today’s cap with a rule. A data centre can connect if it meets three terms: it brings more new power than it uses, it sets aside space for Canadian computing, and it protects BC’s water. <strong>Why now:</strong> the new government can change the cap without a new law, and BC Hydro will pick which projects get power once it is in place. <span class="srcs"><a href={U.reg} target="_blank" rel="noopener">B.C. Reg. 8/2026</a> <a href={U.cfd} target="_blank" rel="noopener">BC Hydro</a></span></p>
           </div>
           <div class="intro">
-            <h2 class="long">Today’s cap splits up a fixed amount of power. A “pay to connect” rule would grow the supply.</h2>
+            <div><p class="term-tag">Term 1 of 3</p><h2>Bring more power than they use.</h2></div>
             <p class="section-lede">
-              Since February 2026, a provincial regulation has capped the power BC Hydro can supply to new data centres at 400 MW over two years: 300 MW for AI data centres and 100 MW for others. Here is that cap next to what they asked for and what one large campus would use. <span class="srcs"><a href={U.reg} target="_blank" rel="noopener">B.C. Reg. 8/2026</a></span>
+              Since February 2026, a provincial regulation has capped the power BC Hydro can supply to new data centres at 400 MW over two years: 300 MW for AI data centres and 100 MW for others. The cap splits up a fixed amount. Data centres that pay for more new power than they use would grow it instead. Here is the cap next to what they asked for and what one large campus would use. <span class="srcs"><a href={U.reg} target="_blank" rel="noopener">B.C. Reg. 8/2026</a></span>
             </p>
           </div>
 
@@ -170,40 +170,40 @@ const bars = [
         </div>
       </section>
 
-      <section class="proof pillar" id="water">
+      <section class="proof" id="deal">
         <div class="wrap">
           <div class="intro">
-            <h2>Plenty of water, and rules to protect it.</h2>
-            <p class="section-lede">BC has lots of water, the newest data centre designs barely use it, and BC already has rules to protect it.</p>
+            <div><p class="term-tag">Term 1, in detail</p><h2>How it would work</h2></div>
+            <p class="section-lede">Three rules. Each builds on a precedent elsewhere or on BC’s own rules, and the first goes further than any of them.</p>
           </div>
 
-          <ul class="stats water">
+          <HowItWorks />
+
+          <ol class="rules">
             <li>
-              <p class="stat-label">BC has it</p>
-              <p class="stat-num">#1 in Canada</p>
-              <p>BC’s Pacific coast has the highest water yield per square metre of any region in the country.</p>
-              <p class="srcs"><a href={U.statcan} target="_blank" rel="noopener">Statistics Canada</a></p>
+              <h3>Bring more power than you use</h3>
+              <p>To plug in, a data centre pays for more new power and power lines than it will use, under a long-term contract. The extra goes to everyone else. BC already does a version of this: when a new load is over about 150 MW, the grid upgrades it helps pay for under BC Hydro’s tariff can include new generation. Data centres asked for twice the power BC can offer, so BC can set the bar.</p>
+              <p class="srcs"><a href="https://app.bchydro.com/content/dam/hydro/medialib/internet/documents/appcontent/your_account/Electric_Tariff_Supplement_Number_6.pdf" target="_blank" rel="noopener">BC Hydro Tariff Supplement 6</a> <a href={U.ohio} target="_blank" rel="noopener">AEP Ohio</a> <a href={U.ireland} target="_blank" rel="noopener">CRU, Ireland’s regulator, Dec 2025</a></p>
             </li>
             <li>
-              <p class="stat-label">New designs barely use it</p>
-              <p class="stat-num">125M+ litres</p>
-              <p>of water a year that Microsoft says each data centre on its new sealed-loop design will avoid, about 50 Olympic pools.</p>
-              <p class="srcs"><a href={U.microsoft} target="_blank" rel="noopener">Microsoft, Dec 2024</a></p>
+              <h3>Flex when the grid is tight</h3>
+              <p>Data centres can pause or shift some computing for a few hours when the grid is strained. Google has agreed to do this with two US utilities. BC’s 2026 call already makes every applicant agree to cut its use by at least 10% of what it asked for, at least 4 hours at a time, on a day’s notice, with no compensation. That matters most in the years before the new power they pay for comes online.</p>
+              <p class="srcs"><a href="https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/how-were-making-data-centers-more-flexible-to-benefit-power-grids/" target="_blank" rel="noopener">Google, Aug 2025</a> <a href={U.rfa} target="_blank" rel="noopener">BC Hydro 2026 request for applications</a> <a href={U.reg} target="_blank" rel="noopener">B.C. Reg. 8/2026</a></p>
             </li>
             <li>
-              <p class="stat-label">BC can enforce it</p>
-              <p class="stat-num">Licensed</p>
-              <p>Industry needs a provincial licence to draw groundwater or stream water, and BC can cut use in a drought, as it did at Bessette Creek in 2026. It can also require sealed-loop cooling.</p>
-              <p class="srcs"><a href={U.groundwater} target="_blank" rel="noopener">Government of BC</a> <a href={U.drought} target="_blank" rel="noopener">BC Gov News, Aug 2026</a></p>
+              <h3>First Nations partnership and public reporting</h3>
+              <p>First Nations own part of the new generation, as in BC Hydro’s 2025 call for power, where every project is 51% First Nations-owned. Every winner’s commitments on power, data and water are published each year.</p>
+              <p class="srcs"><a href={U.call} target="_blank" rel="noopener">BC Gov News, May 2026</a></p>
             </li>
-          </ul>
+          </ol>
+
         </div>
       </section>
 
       <section class="proof pillar pillar-ice" id="sovereign">
         <div class="wrap">
           <div class="intro">
-            <h2>Keep Canadian data in Canadian hands.</h2>
+            <div><p class="term-tag">Term 2 of 3</p><h2>Keep Canadian data in Canadian hands.</h2></div>
             <p class="section-lede">Each data centre that gets BC power should set aside part of its space for Canadian-controlled computing. Hospitals, schools, governments and Canadian AI companies then get computers close to home that answer to Canadian law.</p>
           </div>
 
@@ -230,44 +230,41 @@ const bars = [
         </div>
       </section>
 
-      <section class="proof" id="deal">
+      <section class="proof pillar" id="water">
         <div class="wrap">
           <div class="intro">
-            <h2>How a “pay to connect” deal would work</h2>
-            <p class="section-lede">Five rules. Each builds on a precedent elsewhere or on BC’s own rules, and the first goes further than any of them.</p>
+            <div><p class="term-tag">Term 3 of 3</p><h2>Protect BC’s water.</h2></div>
+            <p class="section-lede">Sealed-loop cooling, metered use and public water reports, with limits in a drought. BC has the water and the rules to do this, and the newest designs barely use any.</p>
           </div>
 
-          <HowItWorks />
+          <ul class="stats water">
+            <li>
+              <p class="stat-label">BC has it</p>
+              <p class="stat-num">#1 in Canada</p>
+              <p>BC’s Pacific coast has the highest water yield per square metre of any region in the country.</p>
+              <p class="srcs"><a href={U.statcan} target="_blank" rel="noopener">Statistics Canada</a></p>
+            </li>
+            <li>
+              <p class="stat-label">New designs barely use it</p>
+              <p class="stat-num">125M+ litres</p>
+              <p>of water a year that Microsoft says each data centre on its new sealed-loop design will avoid, about 50 Olympic pools.</p>
+              <p class="srcs"><a href={U.microsoft} target="_blank" rel="noopener">Microsoft, Dec 2024</a></p>
+            </li>
+            <li>
+              <p class="stat-label">BC can enforce it</p>
+              <p class="stat-num">Licensed</p>
+              <p>Industry needs a provincial licence to draw groundwater or stream water, and BC can cut use in a drought, as it did at Bessette Creek in 2026. It can also require sealed-loop cooling.</p>
+              <p class="srcs"><a href={U.groundwater} target="_blank" rel="noopener">Government of BC</a> <a href={U.drought} target="_blank" rel="noopener">BC Gov News, Aug 2026</a></p>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-          <ol class="rules">
-            <li>
-              <h3>Bring more power than you use</h3>
-              <p>To plug in, a data centre pays for more new power and power lines than it will use, under a long-term contract. The extra goes to everyone else. BC already does a version of this: when a new load is over about 150 MW, the grid upgrades it helps pay for under BC Hydro’s tariff can include new generation. Data centres asked for twice the power BC can offer, so BC can set the bar.</p>
-              <p class="srcs"><a href="https://app.bchydro.com/content/dam/hydro/medialib/internet/documents/appcontent/your_account/Electric_Tariff_Supplement_Number_6.pdf" target="_blank" rel="noopener">BC Hydro Tariff Supplement 6</a> <a href={U.ohio} target="_blank" rel="noopener">AEP Ohio</a> <a href={U.ireland} target="_blank" rel="noopener">CRU, Ireland’s regulator, Dec 2025</a></p>
-            </li>
-            <li>
-              <h3>Flex when the grid is tight</h3>
-              <p>Data centres can pause or shift some computing for a few hours when the grid is strained. Google has agreed to do this with two US utilities. BC’s 2026 call already makes every applicant agree to cut its use by at least 10% of what it asked for, at least 4 hours at a time, on a day’s notice, with no compensation. That matters most in the years before the new power they pay for comes online.</p>
-              <p class="srcs"><a href="https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/how-were-making-data-centers-more-flexible-to-benefit-power-grids/" target="_blank" rel="noopener">Google, Aug 2025</a> <a href={U.rfa} target="_blank" rel="noopener">BC Hydro 2026 request for applications</a> <a href={U.reg} target="_blank" rel="noopener">B.C. Reg. 8/2026</a></p>
-            </li>
-            <li>
-              <h3>Water rules first</h3>
-              <p>Closed-loop cooling, metered use, public water reports, and limits in drought.</p>
-              <p class="srcs"><a href={U.groundwater} target="_blank" rel="noopener">Government of BC</a> <a href={U.drought} target="_blank" rel="noopener">BC Gov News, Aug 28, 2026</a></p>
-            </li>
-            <li>
-              <h3>Keep data in Canadian hands</h3>
-              <p>Each data centre says how much of its space goes to Canadian-controlled computing. That promise goes into its power contract and is published.</p>
-              <p class="srcs"><a href={U.rfa} target="_blank" rel="noopener">BC Hydro 2026 request for applications</a></p>
-            </li>
-            <li>
-              <h3>First Nations partnership and public reporting</h3>
-              <p>First Nations own part of the new generation, as in BC Hydro’s 2025 call for power, where every project is 51% First Nations-owned. Every winner’s commitments are published each year.</p>
-              <p class="srcs"><a href={U.call} target="_blank" rel="noopener">BC Gov News, May 2026</a></p>
-            </li>
-          </ol>
-
-          <h3 class="terms-h">A win for everyone</h3>
+      <section class="band-dark" id="wins">
+        <div class="wrap">
+          <div class="intro">
+            <h2>A win for everyone</h2>
+          </div>
           <ul class="stats wins">
             <li>
               <p class="stat-label">Households</p>
@@ -284,7 +281,7 @@ const bars = [
             <li>
               <p class="stat-label">Data centres</p>
               <p class="stat-num">~800 MW</p>
-              <p>asked for, with 400 on offer. A clear rule gives them a way in: bring more power than you use, follow the water and data rules, and you can connect.</p>
+              <p>asked for, with 400 on offer. A clear rule gives them a way in: bring more power than you use, keep Canadian data in Canadian hands, protect BC’s water, and you can connect.</p>
               <p class="srcs"><a href={U.cfd} target="_blank" rel="noopener">BC Hydro, 2026 Call for Demand</a></p>
             </li>
           </ul>

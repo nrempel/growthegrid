@@ -193,17 +193,19 @@ p { max-width: var(--measure); text-wrap: pretty; }
 .hero.offscreen .pulse { animation-play-state: paused; }
 
 /* ---------- sections ---------- */
-.numbers, .proof, .act, .faq { padding: var(--section-y) 0; }
-.numbers {
+.numbers, .band-dark, .proof, .act, .faq { padding: var(--section-y) 0; }
+.numbers, .band-dark {
   --fg: var(--ice); --fg-2: var(--on-dark-2); --muted: var(--on-dark-3); --num: var(--snow); --card-rule: var(--line);
   background: var(--spruce); color: var(--ice);
-  margin-top: -2px;
 }
+.numbers { margin-top: -2px; }
+.band-dark h2 { color: var(--ice); }
 .proof, .faq { background: var(--snow); }
 .pillar-ice { background: var(--ice); }
 .act { background: var(--ice-2); }
 
 .intro { margin-bottom: 48px; }
+.term-tag { margin: 0 0 12px; font-size: var(--fs-xs); font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; line-height: 1.2; color: var(--muted); }
 .section-lede { font-size: var(--fs-lg); margin: 24px 0 0; color: var(--fg-2); max-width: 52ch; }
 @media (min-width: 1000px) {
   .intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 88px); align-items: end; }
@@ -232,7 +234,6 @@ p { max-width: var(--measure); text-wrap: pretty; }
 .rules > li { counter-increment: term; }
 .rules > li::before { content: 'Rule ' counter(term); }
 .rules > li:last-child { grid-column: 1 / -1; }
-.terms-h { margin: var(--block-gap) 0 24px; font-size: clamp(1.9rem, 3vw, 2.4rem); }
 @media (max-width: 860px) { .stats, .rules { grid-template-columns: 1fr; } }
 
 /* ---------- sources: one style everywhere ---------- */
