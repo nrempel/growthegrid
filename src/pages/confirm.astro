@@ -1,0 +1,58 @@
+---
+import Head from '../components/Head.astro';
+import Footer from '../components/Footer.astro';
+import { env } from 'cloudflare:workers';
+
+export const prerender = false;
+
+// GET shows a button (mail scanners open links, so a visit alone must not confirm anyone).
+// POST sets confirmed_at. Only confirmed rows ever receive updates.
+type D1 = { prepare(sql: string): { bind(...v: unknown[]): { run(): Promise<{ meta?: { changes?: number } }> } } };
+const db = (env as unknown as { LIST?: D1 }).LIST;
+const token = (Astro.url.searchParams.get('t') ?? '').replace(/[^a-f0-9]/g, '').slice(0, 64);
+let state: 'ask' | 'done' | 'missing' = token ? 'ask' : 'missing';
+if (Astro.request.method === 'POST' && token && db) {
+  const r = await db
+    .prepare('UPDATE subscribers SET confirmed_at = COALESCE(confirmed_at, ?) WHERE token = ?')
+    .bind(new Date().toISOString(), token)
+    .run();
+  state = r.meta?.changes ? 'done' : 'missing';
+}
+Astro.response.headers.set('cache-control', 'no-store');
+---
+
+<!doctype html>
+<html lang="en-CA">
+  <head>
+    <Head title="Confirm · Grow the Grid BC" noindex />
+  </head>
+  <body class="nav-quiet">
+    <header class="nav">
+      <a class="brand" href="/">Grow the Grid BC</a>
+      <a class="nav-cta" href="/#act">Email your MLA</a>
+    </header>
+    <main class="lost" id="top">
+      <div class="wrap">
+        {state === 'done' ? (
+          <>
+            <h1>You’re confirmed.</h1>
+            <p class="lede">You’ll get updates when there’s news on the cap. Every email has an unsubscribe link.</p>
+            <div class="hero-actions"><a class="btn btn-line" href="/">Back to the start</a></div>
+          </>
+        ) : state === 'ask' ? (
+          <>
+            <h1>Confirm your email.</h1>
+            <p class="lede">Press the button to stay on the Grow the Grid BC update list. If you didn’t sign up, ignore this and you won’t get any more emails.</p>
+            <form method="post" class="hero-actions"><button class="btn btn-hot" type="submit">Confirm</button></form>
+          </>
+        ) : (
+          <>
+            <h1>That link didn’t work.</h1>
+            <p class="lede">It may have expired, or you already unsubscribed. You can join again from the <a href="/">main page</a>.</p>
+          </>
+        )}
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>

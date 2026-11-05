@@ -1,0 +1,29 @@
+---
+import Head from '../components/Head.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<!doctype html>
+<html lang="en-CA">
+  <head>
+    <Head title="Page not found · Grow the Grid BC" noindex />
+  </head>
+  <body class="nav-quiet">
+    <header class="nav">
+      <a class="brand" href="/">Grow the Grid BC</a>
+      <a class="nav-cta" href="/#act">Email your MLA</a>
+    </header>
+    <main class="lost" id="top">
+      <div class="wrap">
+        <p class="lost-code">404</p>
+        <h1>This page isn’t on the grid.</h1>
+        <p class="lede">The whole campaign is one page. Head back to it, or go straight to the letter.</p>
+        <div class="hero-actions">
+          <a class="btn btn-hot" href="/#act">Email your MLA</a>
+          <a class="btn btn-line" href="/">Back to the start</a>
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>

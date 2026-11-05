@@ -1,0 +1,69 @@
+---
+import Head from '../components/Head.astro';
+import Footer from '../components/Footer.astro';
+import { CERTIFIED_ON, UPDATED_LABEL } from '../data/site';
+---
+
+<!doctype html>
+<html lang="en-CA">
+  <head>
+    <Head title="Privacy | Grow the Grid BC" description="What Grow the Grid BC keeps, what it never gets, and who else handles data when you email your MLA." path="/privacy/" />
+  </head>
+  <body class="nav-quiet">
+    <header class="nav">
+      <a class="brand" href="/">Grow the Grid BC</a>
+      <a class="nav-cta" href="/#act">Email your MLA</a>
+    </header>
+    <main class="doc" id="top">
+      <div class="wrap">
+        <h1>Privacy</h1>
+        <p class="doc-date">Updated {UPDATED_LABEL}.</p>
+
+        <h2>What I never get</h2>
+        <p>Your name, street address and letter stay in your browser, and so does your email address unless you join the update list below. When you send, your own email app (or Gmail or Outlook, if you choose them) sends the letter. I don’t receive a copy.</p>
+
+        <h2>What the site keeps</h2>
+        <ul>
+          <li><strong>A letter count per riding.</strong> When you press a send button or Copy letter, the site adds one to your riding’s count (once a day from each internet connection). The count holds no personal information.</li>
+          <li><strong>A one-day duplicate check.</strong> To count each person once per riding per day, the site stores a code made from your IP address and a secret random value, next to the riding. It is deleted automatically after 24 hours. The update-list form uses the same kind of code to allow at most five sign-ups a day from one connection, also deleted after 24 hours.</li>
+          <li><strong>Step counts.</strong> The site records which steps were used (for example “looked up a riding” or “pressed send”), how you found your riding, which send or share button you used, whether you used a touch screen, whether you added your own words, which share link brought you here (if any), the riding, and the time. These records hold no IP address, cookie or ID. Cloudflare keeps them for about three months.</li>
+        </ul>
+        <p>The site uses no cookies and no advertising or cross-site tracking tools. Cloudflare Web Analytics counts page visits and which site sent the visitor, without cookies and without following you to other sites. <a href="https://www.cloudflare.com/web-analytics/" target="_blank" rel="noopener">About Cloudflare Web Analytics</a>.</p>
+
+        <h2 id="list">The update list (only if you join)</h2>
+        <p>You can join an update list for news about this campaign, after you send or from the bottom of the page. Only if you tick the box and give your email, the site keeps:</p>
+        <ul>
+          <li>your email address, the riding you wrote from, the share link that brought you (if any), the time you joined, the exact words you agreed to, and when your confirmation email was sent and when you confirmed;</li>
+          <li>a random code for your unsubscribe link.</li>
+        </ul>
+        <p>The form is checked by Cloudflare Turnstile, which runs small checks in your browser to tell people from bots. Cloudflare says it processes only the signals it needs for that, such as your IP address and browser details. It only loads when you reach the form. <a href="https://www.cloudflare.com/turnstile-privacy-policy/" target="_blank" rel="noopener">Turnstile’s privacy policy</a>.</p>
+        <p>First you get one email asking you to confirm. Nothing else is sent until you do, and if you don’t confirm within 14 days of that email, I delete your address. After that, the site also records which updates were sent to you, so nobody gets the same one twice.</p>
+        <p>It’s all stored in a Cloudflare database and sent through Cloudflare’s email service, used only for updates about this campaign, and never shared or sold. Every email has an unsubscribe link, and your mail app’s Unsubscribe button works too. Unsubscribing deletes your address. You can also email me to be removed. I delete the whole list when the campaign ends.</p>
+
+        <h2>Who else handles data</h2>
+        <ul>
+          <li><strong>Cloudflare</strong> hosts this site. Like any web host, it receives your IP address with each request. I have turned off the site’s own request logs. <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare’s privacy policy</a>.</li>
+          <li><strong>OpenNorth Represent</strong> finds your riding. Your browser sends it your postal code, or your location rounded to about 100 metres, directly. OpenNorth says its server logs may include your request and IP address, and that it does not share or sell them. <a href="https://represent.opennorth.ca/privacy/" target="_blank" rel="noopener">OpenNorth’s privacy policy</a>.</li>
+          <li><strong>Gmail or Outlook</strong>, only if you choose those buttons. The letter is placed in a link to their site, so they receive it as a draft in your account.</li>
+          <li><strong>Email to hello@growthegrid.ca</strong> goes through Cloudflare’s email forwarding to my Gmail account. I keep it until I no longer need it to answer you, and you can ask me to delete it.</li>
+          <li><strong>Share buttons</strong> are plain links. Nothing goes to Facebook, X, Bluesky or WhatsApp unless you tap one.</li>
+        </ul>
+        <p>Cloudflare is a US company, and its servers are in many countries.</p>
+
+        <h2>About this site</h2>
+        <ul>
+          <li>This site shares my personal view on a public policy question. It is not legal, financial or official advice.</li>
+          <li>I check every fact against the source linked next to it, but sources change, so I can’t promise every detail is complete or current. Check the source before you rely on it.</li>
+          <li>MLA names come from preliminary election results, and the email addresses follow the legislature’s standard format. Final results are due by Return Day, {CERTIFIED_ON}. Until then a name or address may change. If a message bounces, check leg.bc.ca/members after that date.</li>
+          <li>This site is not affiliated with BC Hydro, the Government of British Columbia, the Legislative Assembly, Elections BC or any political party. Companies named on the site have not endorsed it.</li>
+        </ul>
+
+        <h2>Questions</h2>
+        <p>Email me at <a href="mailto:hello@growthegrid.ca">hello@growthegrid.ca</a>. I’m Nicholas Rempel, and I’m responsible for this site’s privacy practices. You can ask what the site holds about you, or ask me to correct or delete it. If you joined the update list, I can find and send you, correct or delete your entry. Otherwise the site keeps nothing that names you, so I usually can’t find one person’s records, but I will check and tell you. If something on this site is wrong, tell me and I’ll fix it.</p>
+
+        <p><a class="btn btn-hot" href="/#act">Back to the letter</a></p>
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>

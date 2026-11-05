@@ -1,0 +1,656 @@
+{
+ "Abbotsford South": {
+  "name": "Bruce Banman",
+  "party": "Conservative",
+  "email": "Bruce.Banman.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Abbotsford West": {
+  "name": "Korky Neufeld",
+  "party": "Conservative",
+  "email": "Korky.Neufeld.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Abbotsford-Mission": {
+  "name": "Darryl Kropp",
+  "party": "Conservative",
+  "email": "Darryl.Kropp.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Boundary-Similkameen": {
+  "name": "Donegal Wilson",
+  "party": "Conservative",
+  "email": "Donegal.Wilson.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Bulkley Valley-Stikine": {
+  "name": "Sharon Hartwell",
+  "party": "Conservative",
+  "email": "Sharon.Hartwell.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Burnaby Centre": {
+  "name": "Joshua Domnich",
+  "party": "Conservative",
+  "email": "Joshua.Domnich.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Burnaby East": {
+  "name": "Rohini Reah Arora",
+  "party": "NDP",
+  "email": "Rohini.Arora.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Burnaby North": {
+  "name": "Simon Chandler",
+  "party": "Conservative",
+  "email": "Simon.Chandler.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Burnaby South-Metrotown": {
+  "name": "Paul Choi",
+  "party": "NDP",
+  "email": "Paul.Choi.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Burnaby-New Westminster": {
+  "name": "Raj Chouhan",
+  "party": "NDP",
+  "email": "Raj.Chouhan.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Cariboo-Chilcotin": {
+  "name": "Lorne Doerkson",
+  "party": "Conservative",
+  "email": "Lorne.Doerkson.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Chilliwack North": {
+  "name": "Heather Maahs",
+  "party": "Conservative",
+  "email": "Heather.Maahs.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Chilliwack-Cultus Lake": {
+  "name": "A'aliya Warbus",
+  "party": "Conservative",
+  "email": "Aaliya.Warbus.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Columbia River-Revelstoke": {
+  "name": "Scott McInnis",
+  "party": "Conservative",
+  "email": "Scott.McInnis.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Coquitlam-Burke Mountain": {
+  "name": "Ryan Peterson",
+  "party": "Conservative",
+  "email": "Ryan.Peterson.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Coquitlam-Maillardville": {
+  "name": "Matt Liang",
+  "party": "Conservative",
+  "email": "Matt.Liang.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Courtenay-Comox": {
+  "name": "Will Cole-Hamilton",
+  "party": "NDP",
+  "email": "Will.Cole-Hamilton.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Cowichan Valley": {
+  "name": "Bert Chen",
+  "party": "Conservative",
+  "email": "Bert.Chen.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Delta North": {
+  "name": "Monica Mohan",
+  "party": "Conservative",
+  "email": "Monica.Mohan.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Delta South": {
+  "name": "Ian Paton",
+  "party": "Conservative",
+  "email": "Ian.Paton.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Esquimalt-Colwood": {
+  "name": "Darlene Rotchford",
+  "party": "NDP",
+  "email": "Darlene.Rotchford.MLA@leg.bc.ca",
+  "status": "verified",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Fraser-Nicola": {
+  "name": "Tony Luck",
+  "party": "Conservative",
+  "email": "Tony.Luck.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Juan de Fuca-Malahat": {
+  "name": "Mike Hicks",
+  "party": "Conservative",
+  "email": "Mike.Hicks.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Kamloops Centre": {
+  "name": "Peter Milobar",
+  "party": "Conservative",
+  "email": "Peter.Milobar.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Kamloops-North Thompson": {
+  "name": "Ward Stamer",
+  "party": "Conservative",
+  "email": "Ward.Stamer.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Kelowna Centre": {
+  "name": "Kristina Loewen",
+  "party": "Conservative",
+  "email": "Kristina.Loewen.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Kelowna-Lake Country-Coldstream": {
+  "name": "Pavneet Singh",
+  "party": "Conservative",
+  "email": "Pavneet.Singh.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Kelowna-Mission": {
+  "name": "Gavin Dew",
+  "party": "Conservative",
+  "email": "Gavin.Dew.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Kootenay Central": {
+  "name": "Brittny Anderson",
+  "party": "NDP",
+  "email": "Brittny.Anderson.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Kootenay-Monashee": {
+  "name": "Steve Morissette",
+  "party": "NDP",
+  "email": "Steve.Morissette.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Kootenay-Rockies": {
+  "name": "Pete Davis",
+  "party": "Conservative",
+  "email": "Pete.Davis.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Ladysmith-Oceanside": {
+  "name": "Stephanie Higginson",
+  "party": "NDP",
+  "email": "Stephanie.Higginson.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://surreynowleader.com/2026/10/26/b-c-ndp-candidate-pulls-ahead-by-13-votes-after-results-corrected-in-ladysmith-oceanside-riding/"
+ },
+ "Langford-Highlands": {
+  "name": "Ravi Parmar",
+  "party": "NDP",
+  "email": "Ravi.Parmar.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Langley-Abbotsford": {
+  "name": "Harman Bhangu",
+  "party": "Conservative",
+  "email": "Harman.Bhangu.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Langley-Walnut Grove": {
+  "name": "Misty Van Popta",
+  "surname": "Van Popta",
+  "party": "Conservative",
+  "email": "Misty.VanPopta.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Langley-Willowbrook": {
+  "name": "Jody Toor",
+  "party": "Conservative",
+  "email": "Jody.Toor.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Maple Ridge East": {
+  "name": "Lawrence Mok",
+  "party": "Conservative",
+  "email": "Lawrence.Mok.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Maple Ridge-Pitt Meadows": {
+  "name": "Doug Morneau",
+  "party": "Conservative",
+  "email": "Doug.Morneau.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Mid Island-Pacific Rim": {
+  "name": "Josie Osborne",
+  "party": "NDP",
+  "email": "Josie.Osborne.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Nanaimo-Gabriola Island": {
+  "name": "Sheila Malcolmson",
+  "party": "NDP",
+  "email": "Sheila.Malcolmson.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Nanaimo-Lantzville": {
+  "name": "George Anderson",
+  "party": "NDP",
+  "email": "George.Anderson.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Nechako Lakes": {
+  "name": "Diane Black",
+  "party": "Conservative",
+  "email": "Diane.Black.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "New Westminster-Coquitlam": {
+  "name": "Jennifer Whiteside",
+  "party": "NDP",
+  "email": "Jennifer.Whiteside.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "North Coast-Haida Gwaii": {
+  "name": "Tamara Davidson",
+  "party": "NDP",
+  "email": "Tamara.Davidson.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "North Island": {
+  "name": "Anna Kindy",
+  "party": "Conservative",
+  "email": "Anna.Kindy.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "North Vancouver-Lonsdale": {
+  "name": "Bowinn Ma",
+  "party": "NDP",
+  "email": "Bowinn.Ma.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "North Vancouver-Seymour": {
+  "name": "Lynne Block",
+  "party": "Conservative",
+  "email": "Lynne.Block.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Oak Bay-Gordon Head": {
+  "name": "Diana Gibson",
+  "party": "NDP",
+  "email": "Diana.Gibson.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Peace River North": {
+  "name": "Curtis Whitford",
+  "party": "Conservative",
+  "email": "Curtis.Whitford.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Peace River South": {
+  "name": "Larry Neufeld",
+  "party": "Conservative",
+  "email": "Larry.Neufeld.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Penticton-Summerland": {
+  "name": "Tracy St Claire",
+  "surname": "St Claire",
+  "party": "Conservative",
+  "email": "Tracy.StClaire.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Port Coquitlam": {
+  "name": "Mike Farnworth",
+  "party": "NDP",
+  "email": "Mike.Farnworth.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Port Moody-Burquitlam": {
+  "name": "John McEwen",
+  "party": "Conservative",
+  "email": "John.McEwen.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Powell River-Sunshine Coast": {
+  "name": "Randene Neill",
+  "party": "NDP",
+  "email": "Randene.Neill.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Prince George-Mackenzie": {
+  "name": "Kiel Giddens",
+  "party": "Conservative",
+  "email": "Kiel.Giddens.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Prince George-North Cariboo": {
+  "name": "Sheldon Clare",
+  "party": "Conservative",
+  "email": "Sheldon.Clare.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Prince George-Valemount": {
+  "name": "Rosalyn Bird",
+  "party": "Conservative",
+  "email": "Rosalyn.Bird.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Richmond Centre": {
+  "name": "Sacha Peter",
+  "party": "Conservative",
+  "email": "Sacha.Peter.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Richmond-Bridgeport": {
+  "name": "Teresa Wat",
+  "party": "Conservative",
+  "email": "Teresa.Wat.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Richmond-Queensborough": {
+  "name": "Steve Kooner",
+  "party": "Conservative",
+  "email": "Steve.Kooner.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Richmond-Steveston": {
+  "name": "Gordon Zhang",
+  "party": "Conservative",
+  "email": "Gordon.Zhang.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Saanich North and the Islands": {
+  "name": "Emily Lowan",
+  "party": "Green",
+  "email": "Emily.Lowan.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Saanich South": {
+  "name": "Cathie Ounsted",
+  "party": "Conservative",
+  "email": "Cathie.Ounsted.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Salmon Arm-Shuswap": {
+  "name": "David L Williams",
+  "party": "Conservative",
+  "email": "David.Williams.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Skeena": {
+  "name": "Claire Rattée",
+  "party": "Conservative",
+  "email": "Claire.Rattee.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Surrey City Centre": {
+  "name": "Zeeshan Wahla",
+  "party": "Conservative",
+  "email": "Zeeshan.Wahla.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Surrey North": {
+  "name": "Mandeep Singh Dhaliwal",
+  "party": "Conservative",
+  "email": "Mandeep.Dhaliwal.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Surrey South": {
+  "name": "Megan Knight",
+  "party": "Conservative",
+  "email": "Megan.Knight.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Surrey-Cloverdale": {
+  "name": "Nicholas Cartmell",
+  "party": "Conservative",
+  "email": "Nicholas.Cartmell.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Surrey-Fleetwood": {
+  "name": "Garry Purewal",
+  "party": "Conservative",
+  "email": "Garry.Purewal.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Surrey-Guildford": {
+  "name": "Garry Thind",
+  "party": "Conservative",
+  "email": "Garry.Thind.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Surrey-Newton": {
+  "name": "Harj Dhaliwal",
+  "party": "Conservative",
+  "email": "Harj.Dhaliwal.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Surrey-Panorama": {
+  "name": "Bryan Tepper",
+  "party": "Conservative",
+  "email": "Bryan.Tepper.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Surrey-Serpentine River": {
+  "name": "Jessy Sahota",
+  "party": "Conservative",
+  "email": "Jessy.Sahota.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Surrey-White Rock": {
+  "name": "Trevor Halford",
+  "party": "Conservative",
+  "email": "Trevor.Halford.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Vancouver-Fraserview": {
+  "name": "Deep Sandhu",
+  "party": "Conservative",
+  "email": "Deep.Sandhu.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Vancouver-Hastings": {
+  "name": "Niki Sharma",
+  "party": "NDP",
+  "email": "Niki.Sharma.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Vancouver-Kensington": {
+  "name": "Mable Elmore",
+  "party": "NDP",
+  "email": "Mable.Elmore.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Vancouver-Langara": {
+  "name": "Jaime Stein",
+  "party": "Conservative",
+  "email": "Jaime.Stein.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Vancouver-Little Mountain": {
+  "name": "Christine Boyle",
+  "party": "NDP",
+  "email": "Christine.Boyle.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Vancouver-Point Grey": {
+  "name": "David Eby",
+  "party": "NDP",
+  "email": "David.Eby.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Vancouver-Quilchena": {
+  "name": "Carson Binda",
+  "party": "Conservative",
+  "email": "Carson.Binda.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Vancouver-Renfrew": {
+  "name": "Adrian Dix",
+  "party": "NDP",
+  "email": "Adrian.Dix.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Vancouver-South Granville": {
+  "name": "Lara Honrado",
+  "party": "NDP",
+  "email": "Lara.Honrado.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Vancouver-Strathcona": {
+  "name": "Amanda Burrows",
+  "party": "NDP",
+  "email": "Amanda.Burrows.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Vancouver-West End": {
+  "name": "Spencer Chandra Herbert",
+  "surname": "Chandra Herbert",
+  "party": "NDP",
+  "email": "Spencer.ChandraHerbert.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Vancouver-Yaletown": {
+  "name": "Margareta Dovgal",
+  "party": "Conservative",
+  "email": "Margareta.Dovgal.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Vernon-Lumby": {
+  "name": "Kevin Acton",
+  "party": "Conservative",
+  "email": "Kevin.Acton.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Victoria-Beacon Hill": {
+  "name": "Grace Lore",
+  "party": "NDP",
+  "email": "Grace.Lore.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "Victoria-Swan Lake": {
+  "name": "Nina Krieger",
+  "party": "NDP",
+  "email": "Nina.Krieger.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "West Kelowna-Peachland": {
+  "name": "Macklin McCall",
+  "party": "Conservative",
+  "email": "Macklin.McCall.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "West Vancouver-Capilano": {
+  "name": "Caroline Elliott",
+  "party": "Conservative",
+  "email": "Caroline.Elliott.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ },
+ "West Vancouver-Sea to Sky": {
+  "name": "Jeremy Valeriote",
+  "party": "Green",
+  "email": "Jeremy.Valeriote.MLA@leg.bc.ca",
+  "status": "preliminary",
+  "source": "https://bc.locallink.ca/election-2026/results/"
+ }
+}

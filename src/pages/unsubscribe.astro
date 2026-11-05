@@ -1,0 +1,57 @@
+---
+import Head from '../components/Head.astro';
+import Footer from '../components/Footer.astro';
+import { env } from 'cloudflare:workers';
+
+export const prerender = false;
+
+// GET shows a button (mail scanners open links, so a visit alone must not unsubscribe anyone).
+// POST (the button) deletes the row. When sending is built, add mail apps' one-click
+// unsubscribe (RFC 8058) as an /api route: Astro's origin check blocks their cross-site POSTs here.
+type D1 = { prepare(sql: string): { bind(...v: unknown[]): { run(): Promise<{ meta?: { changes?: number } }> } } };
+const db = (env as unknown as { LIST?: D1 }).LIST;
+const token = (Astro.url.searchParams.get('t') ?? '').replace(/[^a-f0-9]/g, '').slice(0, 64);
+let done = false;
+if (Astro.request.method === 'POST' && token && db) {
+  await db.prepare('DELETE FROM subscribers WHERE token = ?').bind(token).run();
+  await db.prepare('DELETE FROM sends WHERE email NOT IN (SELECT email FROM subscribers)').bind().run();
+  done = true;
+}
+Astro.response.headers.set('cache-control', 'no-store');
+---
+
+<!doctype html>
+<html lang="en-CA">
+  <head>
+    <Head title="Unsubscribe · Grow the Grid BC" noindex />
+  </head>
+  <body class="nav-quiet">
+    <header class="nav">
+      <a class="brand" href="/">Grow the Grid BC</a>
+      <a class="nav-cta" href="/#act">Email your MLA</a>
+    </header>
+    <main class="lost" id="top">
+      <div class="wrap">
+        {done ? (
+          <>
+            <h1>You’re off the list.</h1>
+            <p class="lede">Your email address has been deleted. You won’t get any more updates.</p>
+            <div class="hero-actions"><a class="btn btn-line" href="/">Back to the start</a></div>
+          </>
+        ) : token ? (
+          <>
+            <h1>Leave the update list?</h1>
+            <p class="lede">This deletes your email address. You won’t get any more updates.</p>
+            <form method="post" class="hero-actions"><button class="btn btn-hot" type="submit">Unsubscribe</button></form>
+          </>
+        ) : (
+          <>
+            <h1>Leave the update list.</h1>
+            <p class="lede">Use the unsubscribe link in any update email, or email <a href="mailto:hello@growthegrid.ca">hello@growthegrid.ca</a> and I’ll remove you.</p>
+          </>
+        )}
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>

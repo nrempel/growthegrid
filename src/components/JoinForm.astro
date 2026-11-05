@@ -1,0 +1,19 @@
+---
+// The update-list sign-up. Used on the thank-you step and in the footer; src/scripts/app.ts wires
+// every form.join on the page (Turnstile, checks, POST /api/subscribe).
+import { CONSENT_TEXT, TURNSTILE_SITEKEY } from '../data/list';
+interface Props { id: string; heading: string; dark?: boolean }
+const { id, heading, dark = false } = Astro.props;
+---
+
+<form class:list={['join', { 'join-dark': dark }]} id={id} data-join novalidate aria-labelledby={`${id}-h`}>
+  <p class="join-h" id={`${id}-h`}>{heading}</p>
+  <label class="join-consent"><input type="checkbox" class="join-box" aria-describedby={`${id}-msg`} /> <span>{CONSENT_TEXT}</span></label>
+  <div class="row">
+    <input class="join-email" type="email" autocomplete="email" placeholder="you@example.com" aria-label="Your email" aria-describedby={`${id}-msg`} />
+    <button class:list={['btn', dark ? '' : 'btn-ink', 'join-btn']} type="submit">Join</button>
+  </div>
+  <div class="join-ts" data-sitekey={TURNSTILE_SITEKEY}></div>
+  <p class="join-msg" id={`${id}-msg`} role="status"></p>
+  <p class="hint join-note">Only campaign updates, never shared. <a href="/privacy/#list">How the list works</a></p>
+</form>

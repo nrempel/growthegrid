@@ -1,0 +1,32 @@
+{
+  "name": "growthegrid",
+  "version": "1.0.0",
+  "description": "Grow the Grid BC: a one-page campaign site asking BC MLAs to let data centres connect if they bring more new power than they use.",
+  "homepage": "https://growthegrid.ca",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nrempel/growthegrid.git"
+  },
+  "author": "Nicholas Rempel",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.23.4"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "deploy": "cf deploy"
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "15.0.0-beta.5",
+    "astro": "^7.4.5"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "2.0.0-beta.v.11",
+    "cf": "^1.0.0-beta.27",
+    "wrangler": "^4.157.0"
+  },
+  "keywords": []
+}

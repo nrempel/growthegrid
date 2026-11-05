@@ -1,0 +1,473 @@
+---
+import LineArt from '../components/LineArt.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import mlas from '../data/mlas.json';
+import Head from '../components/Head.astro';
+import Footer from '../components/Footer.astro';
+import { UPDATED } from '../data/site';
+import { socialLinks } from '../data/social';
+import JoinForm from '../components/JoinForm.astro';
+const shareBubbles = socialLinks(Astro.site?.toString() ?? 'https://growthegrid.ca/', 'bubble');
+
+const ridings = Object.keys(mlas).sort((a, b) => a.localeCompare(b));
+const title = 'Let data centres build BC’s next power plant | Grow the Grid BC';
+const description =
+  'Data centres want to build in BC. Ask your MLA to let them in if they bring more new power than they use, so BC gets a bigger grid. Find your MLA by postal code.';
+const ogDescription = 'Let data centres build in BC if they bring more new power than they use. Ask your MLA. Takes about a minute.';
+const site = Astro.site?.toString() ?? 'https://growthegrid.ca/';
+const jsonLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebSite', '@id': `${site}#site`, url: site, name: 'Grow the Grid BC',
+      alternateName: ['Grow the Grid', 'growthegrid.ca'], inLanguage: 'en-CA', publisher: { '@id': `${site}#person` },
+    },
+    { '@type': 'Person', '@id': `${site}#person`, name: 'Nicholas Rempel', email: 'hello@growthegrid.ca' },
+    {
+      '@type': 'WebPage', '@id': `${site}#page`, url: site, name: title, isPartOf: { '@id': `${site}#site` },
+      about: 'Data centre electricity rules in British Columbia', inLanguage: 'en-CA', dateModified: UPDATED,
+    },
+  ],
+});
+
+// Sources used more than once. Every factual sentence links one of these or its own URL.
+const U = {
+  reg: 'https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/8_2026',
+  cfd: 'https://app.bchydro.com/accounts-billing/electrical-connections/large-load/emerging-industries-connections.html',
+  rfa: 'https://www.bchydro.com/content/dam/BCHydro/customer-portal/documents/accounts-billing/electrical-connections/2026-cfd-request-for-applications.pdf',
+  call: 'https://news.gov.bc.ca/releases/2026ECS0014-000552',
+  asp24: 'https://www.bcbudget.gov.bc.ca/Annual_Reports/2023_2024/pdf/agency/bchydro.pdf',
+  asp26: 'https://www.bcbudget.gov.bc.ca/Annual_Reports/2025_2026/pdf/agency/bchydro.pdf',
+  irp: 'https://docs.bcuc.com/documents/proceedings/2025/doc_84202_b-1-bch-2025-irp-application.pdf',
+  drought: 'https://news.gov.bc.ca/releases/2026WLRS0046-000999',
+  ised: 'https://ised-isde.canada.ca/site/ised/en/canadas-responsible-data-centre-development-principles',
+  gcsov: 'https://www.canada.ca/en/government/system/digital-government/digital-government-innovations/cloud-services/gc-white-paper-data-sovereignty-public-cloud.html',
+  leger: 'https://documents.leger360.com/hubfs/%C3%89tudes%20M%C3%A9diatiques/%C3%89tudes%20M%C3%A9diatiques%20-%202026/7.%20%C3%89tudes%20m%C3%A9diatiques%20Juillet%202026/Leger_Survey_AI_Data_Centres_July2026.pdf',
+  ohio: 'https://www.aepohio.com/company/about/rates/data-center-tariff',
+  ireland: 'https://www.cru.ie/about-us/news/the-cru-publishes-its-decision-on-new-electricity-connection-policy-for-data-centres/',
+  groundwater: 'https://www2.gov.bc.ca/gov/content/environment/air-land-water/water/groundwater-wells-aquifers/information-for-well-owners/well-records-registration/non-domestic-groundwater-use',
+  statcan: 'https://www150.statcan.gc.ca/n1/pub/16-201-x/2017000/sec-2-eng.htm',
+  microsoft: 'https://www.microsoft.com/en-us/microsoft-cloud/blog/2024/12/09/sustainable-by-design-next-generation-datacenters-consume-zero-water-for-cooling/',
+  ltep: 'https://www.bchydro.com/news/press_centre/news_releases/2025/ltep.html',
+  shortfall: 'https://news.gov.bc.ca/releases/2026ECS0045-000916',
+};
+
+const reasons = [
+  'My power bill keeps going up, and I don’t want data centres adding to it.',
+  'I want BC’s water protected, with clear rules for every new site.',
+  'I want Canadian data kept under Canadian control.',
+  'I want the construction jobs and new power built here in BC.',
+];
+
+// Bars are drawn on a 0–1,000 MW scale. Sources: B.C. Reg. 8/2026, BC Hydro 2026 Call for Demand, Alberta Major Projects.
+const bars = [
+  { mw: 400, label: 'BC’s limit for all new data centres', sub: 'Feb 2026 to Jan 2028', tone: 'cap' },
+  { mw: 800, approx: true, label: 'What 15 applications asked BC Hydro for', sub: '2026 Call for Demand', tone: 'ask' },
+  { mw: 1000, approx: true, label: 'One gigawatt-scale AI campus', sub: 'like the one Meta announced in Alberta in July 2026', tone: 'want' },
+];
+---
+
+<!doctype html>
+<html lang="en-CA">
+  <head>
+    <Head title={title} description={description} ogTitle="Let data centres build BC’s next power plant" ogDescription={ogDescription} jsonLd={jsonLd} />
+  </head>
+  <body data-share-url={site}>
+    <header class="nav">
+      <a class="brand" href="#top">Grow the Grid BC</a>
+      <a class="nav-cta" href="#act">Email your MLA</a>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="wrap hero-copy">
+          <h1>Let data centres build BC’s next power plant.</h1>
+          <p class="lede">
+            Data centres want to build in BC. Let’s say yes, on one condition: they bring more new power than they use.
+            The extra goes to everyone, so BC gets a bigger grid.
+          </p>
+          <div class="hero-lookup">
+            <a class="btn btn-hot" id="hero-cta" href="#act">Email your MLA</a>
+            <p class="hero-note">Find your MLA by postal code. Takes about a minute.</p>
+          </div>
+          <p class="counter" id="counter" hidden><strong id="count">0</strong> <span id="count-label">letters started so far</span></p>
+        </div>
+        <LineArt />
+      </section>
+
+      <section class="numbers" id="numbers">
+        <div class="wrap">
+          <div class="opp">
+            <p class="opp-head">Data centres are lining up to build here. If they pay their way, BC gets more power, more jobs and more say over its data.</p>
+            <ul class="stats">
+              <li>
+                <p class="stat-num"><span aria-hidden="true">~</span><span class="sr-only">about </span>800 MW</p>
+                <p>asked for by 15 data centre applications in 2026, twice what BC can offer</p>
+                <p class="srcs"><a href={U.cfd} target="_blank" rel="noopener">BC Hydro</a></p>
+              </li>
+              <li>
+                <p class="stat-num">350,000</p>
+                <p>homes’ worth of new power from the four wind projects BC Hydro picked in its 2025 call for power. Data centre money could pay for the next round.</p>
+                <p class="srcs"><a href={U.call} target="_blank" rel="noopener">BC Gov News, May 2026</a></p>
+              </li>
+              <li>
+                <p class="stat-num">2,500+ jobs</p>
+                <p>More than 1,000 to build TELUS’s BC data centre sites, and 1,500 from the four new wind projects</p>
+                <p class="srcs"><a href="https://www.telus.com/en/about/news-and-events/media-releases/TELUS-and-Government-of-Canada-advance-work-to-scale-Canadas-sovereign-AI-infrastructure" target="_blank" rel="noopener">TELUS</a> <a href={U.call} target="_blank" rel="noopener">BC Gov News, May 2026</a></p>
+              </li>
+            </ul>
+            <p class="opp-why"><strong>Why now:</strong> The new government can change the cap without a new law, and BC Hydro will pick which projects get power once the new government is in place. Ask your MLA to make sure any change comes with the terms below. <span class="srcs"><a href={U.reg} target="_blank" rel="noopener">B.C. Reg. 8/2026</a> <a href={U.cfd} target="_blank" rel="noopener">BC Hydro</a></span></p>
+          </div>
+          <div class="intro">
+            <h2 class="long">Today’s cap splits up a fixed amount of power. A “pay to connect” rule would grow the supply.</h2>
+            <p class="section-lede">
+              Since February 2026, a provincial regulation has capped the power BC Hydro can supply to new data centres at 400 MW over two years: 300 MW for AI data centres and 100 MW for others. Here is that cap next to what they asked for and what one large campus would use. <span class="srcs"><a href={U.reg} target="_blank" rel="noopener">B.C. Reg. 8/2026</a></span>
+            </p>
+          </div>
+
+          <figure class="chart" aria-label="Data centre power in megawatts">
+            <div class="scale" aria-hidden="true">
+              <span style="left:0%">0</span>
+              <span style="left:25%">250</span>
+              <span style="left:50%">500</span>
+              <span style="left:75%">750</span>
+              <span style="left:100%">1,000 MW</span>
+            </div>
+            {bars.map((b) => (
+              <div class={`bar-row tone-${b.tone}`}>
+                <p class="bar-label">{b.label} <span class="bar-sub">{b.sub}</span></p>
+                <div class="track">
+                  <span class="fill" style={`width:${b.mw / 10}%`} />
+                  <span class="val" style={`left:${b.mw / 10}%`}>
+                    {b.approx && (<><span aria-hidden="true">~</span><span class="sr-only">about </span></>)}{b.mw.toLocaleString('en-CA')} MW
+                  </span>
+                </div>
+              </div>
+            ))}
+            <p class="chart-note">Data centres asked for about 800 MW. The rules let BC Hydro offer 400, and no more than 145 to any one project.</p>
+            <figcaption class="srcs">
+              Sources: <a href={U.reg} target="_blank" rel="noopener">B.C. Reg. 8/2026</a>, <a href={U.cfd} target="_blank" rel="noopener">BC Hydro 2026 Call for Demand</a>, <a href="https://majorprojects.alberta.ca/details/Meta-Data-Centre/12183" target="_blank" rel="noopener">Alberta Major Projects (Meta)</a>.
+            </figcaption>
+          </figure>
+
+          <ul class="stats also">
+            <li>
+              <p class="stat-title">We need more power anyway.</p>
+              <p>BC Hydro expects demand to grow about 15% by 2030, and the province says BC needs more generating capacity sooner than expected. The question is who pays to build it.</p>
+              <p class="srcs"><a href={U.ltep} target="_blank" rel="noopener">BC Hydro</a> <a href={U.shortfall} target="_blank" rel="noopener">BC Gov News, Aug 2026</a></p>
+            </li>
+            <li>
+              <p class="stat-title">A bigger grid for dry years.</p>
+              <p>In the 2023-24 drought, BC Hydro’s dams made about 30% less power than the year before, and it bought, on net, about a quarter of its power from outside BC. Its plan says a wider mix of sources makes the grid less dependent on hydro in a drought. Data centres can pay for that new supply.</p>
+              <p class="srcs"><a href={U.asp24} target="_blank" rel="noopener">BC Hydro 2023/24 annual report</a> <a href={U.asp26} target="_blank" rel="noopener">2025/26 report</a> <a href={U.irp} target="_blank" rel="noopener">2025 plan</a></p>
+            </li>
+            <li>
+              <p class="stat-title">Other places are setting terms.</p>
+              <p>Quebec proposes a data centre rate about double what other large customers pay. Alberta moves projects that bring their own power to the front of the line.</p>
+              <p class="srcs"><a href="https://news.hydroquebec.com/news/press-releases/all-quebec/hydro-quebec-proposing-regie-energie-new-rate-large-data-centres-adjustment-rate-cryptographic-use-applied-blockchains.html" target="_blank" rel="noopener">Hydro-Québec</a> <a href="https://www.alberta.ca/datacentres/grid.html" target="_blank" rel="noopener">Government of Alberta</a></p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="proof pillar" id="water">
+        <div class="wrap">
+          <div class="intro">
+            <h2>Plenty of water, and rules to protect it.</h2>
+            <p class="section-lede">Microsoft’s newest design cools with a sealed loop that reuses the same water. <span class="srcs"><a href={U.microsoft} target="_blank" rel="noopener">Microsoft</a></span></p>
+          </div>
+
+          <ul class="stats water">
+            <li>
+              <p class="stat-label">BC has it</p>
+              <p class="stat-num">#1</p>
+              <p>BC’s coast has the highest water yield per square metre in Canada.</p>
+              <p class="srcs"><a href={U.statcan} target="_blank" rel="noopener">Statistics Canada</a></p>
+            </li>
+            <li>
+              <p class="stat-label">New designs barely use it</p>
+              <p class="stat-num">125M+ litres</p>
+              <p>of water a year that Microsoft says each data centre on its new sealed-loop design will avoid, about 50 Olympic pools.</p>
+              <p class="srcs"><a href={U.microsoft} target="_blank" rel="noopener">Microsoft, Dec 2024</a></p>
+            </li>
+            <li>
+              <p class="stat-label">BC can enforce it</p>
+              <p class="stat-num">Licence</p>
+              <p>Industry needs a provincial licence to draw groundwater or stream water, and BC can cut industrial use in a drought, as it did at Bessette Creek in August 2026. BC Hydro already scores water use efficiency when it picks projects. BC can go further and make sealed-loop cooling and public water reports a condition of connecting.</p>
+              <p class="srcs"><a href={U.groundwater} target="_blank" rel="noopener">Government of BC</a> <a href={U.drought} target="_blank" rel="noopener">BC Gov News, Aug 28, 2026</a> <a href={U.rfa} target="_blank" rel="noopener">BC Hydro 2026 request for applications</a></p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="proof pillar pillar-ice" id="sovereign">
+        <div class="wrap">
+          <div class="intro">
+            <h2>Keep Canadian data in Canadian hands.</h2>
+            <p class="section-lede">Hospitals, schools and BC businesses need somewhere safe to keep their data. BC can favour data centres that Canadians control, with no new law.</p>
+          </div>
+
+          <ul class="stats sov">
+            <li>
+              <p class="stat-label">Already in the rules</p>
+              <p class="stat-num">30 of 100</p>
+              <p>points in BC Hydro’s grading of data centres competing for power go to keeping data in Canadian hands. BC Hydro plans to write the winners’ promises into their contracts. They should be published too.</p>
+              <p class="srcs"><a href={U.rfa} target="_blank" rel="noopener">BC Hydro 2026 request for applications</a> <a href={U.reg} target="_blank" rel="noopener">B.C. Reg. 8/2026</a></p>
+            </li>
+            <li>
+              <p class="stat-label">Why it matters</p>
+              <p class="stat-num">Who runs it</p>
+              <p>Storing data here isn’t enough. Ottawa says data kept in Canada by a foreign-run company can still be subject to foreign laws.</p>
+              <p class="srcs"><a href={U.gcsov} target="_blank" rel="noopener">Government of Canada</a></p>
+            </li>
+            <li>
+              <p class="stat-label">Industry signed on</p>
+              <p class="stat-num">5 companies</p>
+              <p>AWS, Microsoft, Bell, TELUS and Cohere signed Ottawa’s data centre principles. The principles say data centre growth must not shift power costs onto households, and call for access to computing for Canadian businesses and institutions. These companies have not endorsed this campaign.</p>
+              <p class="srcs"><a href={U.ised} target="_blank" rel="noopener">Government of Canada, data centre principles</a></p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="proof" id="deal">
+        <div class="wrap">
+          <div class="intro">
+            <h2>How a “pay to connect” deal would work</h2>
+            <p class="section-lede">Five rules. Each builds on a precedent elsewhere or on BC’s own rules, and the first goes further than any of them.</p>
+          </div>
+
+          <HowItWorks />
+
+          <ol class="rules">
+            <li>
+              <h3>Bring more power than you use</h3>
+              <p>To plug in, a data centre pays for more new power and power lines than it will use, under a long-term contract. The extra goes to everyone else. BC already does a version of this: when a new load is over about 150 MW, the grid upgrades it helps pay for under BC Hydro’s tariff can include new generation. Data centres asked for twice the power BC can offer, so BC can set the bar.</p>
+              <p class="srcs"><a href="https://app.bchydro.com/content/dam/hydro/medialib/internet/documents/appcontent/your_account/Electric_Tariff_Supplement_Number_6.pdf" target="_blank" rel="noopener">BC Hydro Tariff Supplement 6</a> <a href={U.ohio} target="_blank" rel="noopener">AEP Ohio</a> <a href={U.ireland} target="_blank" rel="noopener">CRU, Ireland’s regulator, Dec 2025</a></p>
+            </li>
+            <li>
+              <h3>Flex when the grid is tight</h3>
+              <p>Data centres can pause or shift some computing for a few hours when the grid is strained. Google has agreed to do this with two US utilities. BC’s 2026 call already makes every applicant agree to cut its use by at least 10% of what it asked for, at least 4 hours at a time, on a day’s notice, with no compensation. That matters most in the years before the new power they pay for comes online.</p>
+              <p class="srcs"><a href="https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/how-were-making-data-centers-more-flexible-to-benefit-power-grids/" target="_blank" rel="noopener">Google, Aug 2025</a> <a href={U.rfa} target="_blank" rel="noopener">BC Hydro 2026 request for applications</a> <a href={U.reg} target="_blank" rel="noopener">B.C. Reg. 8/2026</a></p>
+            </li>
+            <li>
+              <h3>Water rules first</h3>
+              <p>Closed-loop cooling, metered use, public water reports, and limits in drought.</p>
+              <p class="srcs"><a href={U.groundwater} target="_blank" rel="noopener">Government of BC</a> <a href={U.drought} target="_blank" rel="noopener">BC Gov News, Aug 28, 2026</a></p>
+            </li>
+            <li>
+              <h3>Keep data in Canadian hands</h3>
+              <p>Each data centre says how much of its space goes to Canadian-controlled computing. That promise goes into its power contract and is published.</p>
+              <p class="srcs"><a href={U.rfa} target="_blank" rel="noopener">BC Hydro 2026 request for applications</a></p>
+            </li>
+            <li>
+              <h3>First Nations partnership and public reporting</h3>
+              <p>First Nations own part of the new generation, as in BC Hydro’s 2025 call for power, where every project is 51% First Nations-owned. Every winner’s commitments are published each year.</p>
+              <p class="srcs"><a href={U.call} target="_blank" rel="noopener">BC Gov News, May 2026</a></p>
+            </li>
+          </ol>
+
+          <h3 class="terms-h">A win for everyone</h3>
+          <ul class="stats wins">
+            <li>
+              <p class="stat-label">Households</p>
+              <p class="stat-num">88%</p>
+              <p>of British Columbians in a July 2026 Leger poll worry that AI data centres could raise their power bills. Under this deal, data centres bring more new power than they use, so the grid grows and your bill doesn’t pay for their share.</p>
+              <p class="srcs"><a href={U.leger} target="_blank" rel="noopener">Leger, July 2026</a> <span>(BC sample: 151 people)</span></p>
+            </li>
+            <li>
+              <p class="stat-label">BC</p>
+              <p class="stat-num">$2B+</p>
+              <p>of First Nations ownership in the four new wind projects, each 51% First Nations-owned.</p>
+              <p class="srcs"><a href={U.call} target="_blank" rel="noopener">BC Gov News, May 2026</a></p>
+            </li>
+            <li>
+              <p class="stat-label">Data centres</p>
+              <p class="stat-num">~800 MW</p>
+              <p>asked for, with 400 on offer. A clear rule gives them a way in: bring more power than you use, follow the water and data rules, and you can connect.</p>
+              <p class="srcs"><a href={U.cfd} target="_blank" rel="noopener">BC Hydro, 2026 Call for Demand</a></p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="act" id="act">
+        <div class="wrap act-grid">
+          <div class="act-intro">
+            <h2>Find your MLA by postal code and email them.</h2>
+            <p>
+              Your MLA works for the people in your riding. An email from your own inbox, with your address, shows you’re a constituent. It takes about a minute.
+            </p>
+          </div>
+
+          <div class="panel">
+            <noscript>
+              <p class="warn">This tool needs JavaScript. Without it, find your riding at <a href="https://elections.bc.ca/mydistrict/" target="_blank" rel="noopener">elections.bc.ca/mydistrict</a>, then find your MLA’s email at <a href="https://www.leg.bc.ca/members" target="_blank" rel="noopener">leg.bc.ca/members</a>.</p>
+            </noscript>
+            <form id="lookup" class="lookup" autocomplete="on">
+              <label for="postal">Your postal code</label>
+              <p class="hint" id="postal-hint">Like V8V 1X4</p>
+              <div class="row">
+                <input id="postal" name="postal" autocomplete="postal-code" maxlength="10" required aria-describedby="postal-hint lookup-error" />
+                <button class="btn btn-ink" id="find-btn" type="submit">Find my MLA</button>
+              </div>
+              <p class="error" id="lookup-error" role="alert" hidden></p>
+              <button class="geo" id="geo" type="button" hidden>
+                <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>
+                <span>Use my location</span>
+              </button>
+              <label class="alt" for="riding-select">Or choose your riding</label>
+              <select id="riding-select">
+                <option value="">Choose a riding</option>
+                {ridings.map((r) => <option value={r}>{r}</option>)}
+              </select>
+            </form>
+
+            <fieldset id="choose" class="choose" hidden>
+              <legend>More than one riding matches. Which one is yours?</legend>
+              <div id="choose-buttons"></div>
+            </fieldset>
+
+            <div id="compose" class="compose" hidden>
+              <div class="mla">
+                <h3 class="mla-name" id="mla-name" tabindex="-1"></h3>
+                <p class="mla-meta" id="mla-meta"></p>
+                <a class="mla-email" id="mla-email"></a>
+              </div>
+              <p class="warn" id="mla-match" hidden>Matched from your postal code. Not right? Use your location or choose your riding. You can also check at <a href="https://elections.bc.ca/mydistrict/" target="_blank" rel="noopener">elections.bc.ca/mydistrict</a>.</p>
+              <p class="warn" id="mla-warn" hidden></p>
+
+              <label for="sender-name">Your name</label>
+              <input id="sender-name" autocomplete="name" aria-describedby="name-error" />
+              <p class="error" id="name-error" hidden>Add your name so your MLA knows who wrote.</p>
+              <label for="sender-address">Your street address</label>
+              <p class="opt hint" id="address-hint">So the office knows you’re a constituent. Like 123 Main St, Victoria.</p>
+              <input id="sender-address" autocomplete="street-address" aria-describedby="address-hint" />
+              <label for="sender-why">What’s one thing about where you live or work that this affects?</label>
+              <p class="opt hint" id="why-hint">Optional. One sentence in your own words helps your letter stand out. Or tap a reason below to start from.</p>
+              <input id="sender-why" maxlength="200" aria-describedby="why-hint" placeholder="I work in Kamloops, and…" />
+              <div class="reasons" role="group" aria-label="Reasons you can start from">
+                {reasons.map((r) => <button class="chip reason" type="button" aria-pressed="false">{r}</button>)}
+              </div>
+              <label for="letter">Your letter <span class="opt">edit anything you like</span></label>
+              <textarea id="letter" rows="14"></textarea>
+
+              <a class="btn btn-hot btn-send" id="send-mailto" href="#">Open in my email app</a>
+              <p class="warn" id="mode-warn" hidden>Your letter is long, so copy it instead of opening your email app.</p>
+              <div class="send-alt">
+                <span>Or copy and paste it into any email</span>
+                <button id="copy-address" type="button">Copy address</button>
+                <button id="copy-letter" type="button">Copy letter</button>
+                <a class="web-only" id="send-gmail" href="#" target="_blank" rel="noopener">Gmail</a>
+                <a class="web-only" id="send-outlook" href="#" target="_blank" rel="noopener">Outlook</a>
+              </div>
+              <p class="warn" id="copy-help" hidden></p>
+
+              <p class="check-help" id="sent-help" hidden>If your email app didn’t open, tap “Copy address” and “Copy letter” above, then paste them into a new email in any app.</p>
+
+              <div class="share" id="share" hidden>
+                <p id="share-msg" tabindex="-1"><strong>Thank you.</strong> Many MLA offices reply by email, so watch your inbox. Now ask two friends to write too: it takes them a minute.</p>
+                <button class="btn btn-ink share-main" id="share-native" type="button">Share with a friend</button>
+                <div class="share-row" id="share-row">
+                  <a class="chip" id="share-sms">Text it</a>
+                  <a class="chip" id="share-wa" target="_blank" rel="noopener">WhatsApp</a>
+                  <button class="chip" id="copy-link" type="button">Copy link</button>
+                  <a class="chip" id="share-fb" target="_blank" rel="noopener">Facebook</a>
+                  <a class="chip" id="share-bsky" target="_blank" rel="noopener">Bluesky</a>
+                  <a class="chip" id="share-x" target="_blank" rel="noopener">X</a>
+                </div>
+                <JoinForm id="join" heading="Want updates when there’s news on the cap?" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="faq" id="faq">
+        <div class="wrap faq-grid">
+          <h2>Data centres and your hydro bill: fair questions</h2>
+          <div>
+            <details>
+              <summary>Won’t data centres raise my hydro bill?</summary>
+              <p>They can, if they connect without paying for the new supply they need. In some US states, bills have risen with data centre growth. The energy minister pointed to this in October 2025, when BC debated Bill 31, the law behind the cap. This campaign asks for the opposite: data centres pay for more new generation and transmission than they use, so the grid grows without raising your bill.
+                <span class="srcs"><a href="https://lims.leg.bc.ca/hdms/file/Debates/43rd1st/20251023pm-Hansard-n88.html" target="_blank" rel="noopener">Hansard, Oct 23, 2025</a></span></p>
+            </details>
+            <details>
+              <summary>Don’t we normally share the cost of new power?</summary>
+              <p>For most customers, yes. The biggest ones already pay more. BC Hydro’s tariff makes a large industrial customer pay for its own line to the grid, and when a new load is over about 150 MW, the upgrades it helps pay for can include new generation. Today’s cap keeps each data centre project at 145 MW, close to that line. Some remote mines build their own power: the Diavik diamond mine in the Northwest Territories added a wind farm that covers part of its needs. This campaign asks data centres to go further at grid scale: pay for more new power than they use.
+                <span class="srcs"><a href="https://app.bchydro.com/content/dam/hydro/medialib/internet/documents/appcontent/your_account/Electric_Tariff_Supplement_Number_6.pdf" target="_blank" rel="noopener">BC Hydro Tariff Supplement 6</a> <a href={U.reg} target="_blank" rel="noopener">B.C. Reg. 8/2026</a> <a href="https://natural-resources.canada.ca/maps-tools-publications/publications/diavik-diamond-mine-northwest-territories" target="_blank" rel="noopener">Natural Resources Canada</a></span></p>
+            </details>
+            <details>
+              <summary>Isn’t building new power hard?</summary>
+              <p>Yes, and slow, but it doesn’t have to mean new dams. BC Hydro’s 2025 call for power picked four wind projects, which come online between 2032 and 2033. Power lines are often the slower part: new transmission can take four to eight years in advanced economies. Under this deal, data centres pay for the lines as well as the power. That’s why the terms should be set now, before data centres connect. First Nations are partners in that work: every project in that call is 51% First Nations-owned. A “pay to connect” rule doesn’t skip any of that work. It pays for more of it.
+                <span class="srcs"><a href={U.call} target="_blank" rel="noopener">BC Gov News, May 2026</a> <a href="https://www.iea.org/reports/energy-and-ai/executive-summary" target="_blank" rel="noopener">IEA, Energy and AI</a></span></p>
+            </details>
+            <details>
+              <summary>Isn’t AI bad for the environment?</summary>
+              <p>It uses a lot of power. Data centres used about 1.5% of the world’s electricity in 2024, and the International Energy Agency expects their electricity use to more than double by 2030. They will be built somewhere either way. About 98% of the electricity BC Hydro generates comes from clean or renewable sources, and under this deal each data centre would also pay for more new clean power than it uses and follow strict water rules. Whatever you think of AI, that’s better than the same computing running on fossil fuels somewhere else.
+                <span class="srcs"><a href="https://www.iea.org/reports/energy-and-ai/executive-summary" target="_blank" rel="noopener">IEA, Energy and AI</a> <a href={U.shortfall} target="_blank" rel="noopener">BC Gov News, Aug 2026</a></span></p>
+            </details>
+            <details>
+              <summary>Doesn’t BC already have a power shortage?</summary>
+              <p>BC is tight on power: demand is growing and the province says BC needs more generating capacity sooner than expected. We need new supply either way. If data centres help pay for it, households pay less of it.
+                <span class="srcs"><a href="https://www.bchydro.com/news/press_centre/news_releases/2025/ltep.html" target="_blank" rel="noopener">BC Hydro</a> <a href={U.shortfall} target="_blank" rel="noopener">BC Gov News, Aug 2026</a></span></p>
+            </details>
+            <details>
+              <summary>What about water?</summary>
+              <p>BC has a lot of water, new sealed-loop designs use far less, and BC can set the rules. The facts and sources are in <a href="#water">the water section</a>.</p>
+            </details>
+            <details>
+              <summary>Do data centres create jobs?</summary>
+              <p>Yes, and lots of them while they’re built. Meta’s Alberta campus needs more than 3,000 construction workers at its peak, then 300 permanent staff. TELUS expects more than 1,000 construction jobs at its BC sites, plus hundreds of operations roles. The new power adds more: BC Hydro’s 2025 call for power is expected to create 1,500 jobs. Data centres also pay property tax. In Loudoun County, Virginia, the county said in 2025 that data centres generate 38% of its general fund revenue. This campaign asks for no tax breaks.
+                <span class="srcs"><a href="https://majorprojects.alberta.ca/details/Meta-Data-Centre/12183" target="_blank" rel="noopener">Alberta Major Projects</a> <a href="https://www.telus.com/en/about/news-and-events/media-releases/TELUS-and-Government-of-Canada-advance-work-to-scale-Canadas-sovereign-AI-infrastructure" target="_blank" rel="noopener">TELUS</a> <a href={U.call} target="_blank" rel="noopener">BC Gov News</a> <a href="https://www.loudoun.gov/CivicAlerts.aspx?AID=9635" target="_blank" rel="noopener">Loudoun County</a></span></p>
+            </details>
+            <details>
+              <summary>Why not a moratorium on data centres?</summary>
+              <p>A pause doesn’t fix the power BC already needs, and the investment can go to other provinces instead. A “pay to connect” rule does the opposite: a project connects only if it pays for the new supply it needs.
+                <span class="srcs"><a href="https://www.bchydro.com/news/press_centre/news_releases/2025/ltep.html" target="_blank" rel="noopener">BC Hydro</a></span></p>
+            </details>
+            <details>
+              <summary>What if the data centres leave?</summary>
+              <p>Long-term contracts with minimum payments mean BC isn’t left paying for half-used lines. AEP Ohio already bills data centres for at least 85% of their highest monthly demand in the past 11 months, even if they use less.
+                <span class="srcs"><a href={U.ohio} target="_blank" rel="noopener">AEP Ohio</a></span></p>
+            </details>
+            <details>
+              <summary>What kind of power would they pay for?</summary>
+              <p>New clean power, and BC Hydro picks the mix. Its 2025 call for power picked four wind projects, and it calls onshore wind its lowest-cost new energy. It is also adding a sixth generating unit at Revelstoke. Under this deal, data centres pay for more new power than they use.
+                <span class="srcs"><a href={U.call} target="_blank" rel="noopener">BC Gov News, May 2026</a> <a href={U.irp} target="_blank" rel="noopener">BC Hydro 2025 plan</a></span></p>
+            </details>
+            <details>
+              <summary>Isn’t this already decided?</summary>
+              <p>No. The cap comes from Bill 31 (2025) and the Data Centre Facility and Hydrogen Production Facility Power Supply Regulation (B.C. Reg. 8/2026). That regulation is set by cabinet, so the new government can change it without a new law. BC Hydro has shortlisted some applicants but has not announced which projects get power.
+                <span class="srcs"><a href="https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/8_2026" target="_blank" rel="noopener">B.C. Reg. 8/2026</a> <a href="https://app.bchydro.com/accounts-billing/electrical-connections/large-load/emerging-industries-connections.html" target="_blank" rel="noopener">BC Hydro</a></span></p>
+            </details>
+            <details>
+              <summary>Why email instead of signing a petition?</summary>
+              <p>An email from someone in the riding, with an address, goes straight to the MLA’s office and shows a real constituent cares. A petition name is one of thousands.</p>
+            </details>
+            <details>
+              <summary>Who’s behind this?</summary>
+              <p>Just me, Nicholas Rempel. I’m a British Columbian who pays a BC Hydro bill, and I built this on my own time. I work in tech, so I know what data centres need, and I think they should pay for it. No data centre company, utility or political party funds this, and nobody pays me to do it. Questions or corrections: <a href="mailto:hello@growthegrid.ca">hello@growthegrid.ca</a>.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+      <p id="status" class="sr-only" role="status" aria-live="polite"></p>
+    </main>
+
+    <aside id="sharebar" class="bubbles" aria-label="Share this page" hidden>
+      {shareBubbles.map(([label, ch, href, d]) => (
+        <a class="bubble" href={href} data-ch={`bubble_${ch}`} target="_blank" rel="noopener" aria-label={`Share on ${label}`} data-tip={label}>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d={d} /></svg>
+        </a>
+      ))}
+      <button id="bubble-copy" class="bubble" type="button" aria-label="Copy link" data-tip="Copy link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" /><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" /></svg>
+        <svg class="bubble-done" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg>
+      </button>
+    </aside>
+
+    <Footer home />
+
+    <script src="../scripts/app.ts"></script>
+  </body>
+</html>
