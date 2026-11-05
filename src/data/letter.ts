@@ -30,13 +30,14 @@ export function letterBody(opts: {
 
 I live in ${opts.riding}, and I'm writing about BC's cap on power for new data centres.${personal}
 
-BC Hydro can offer new data centres at most 400 MW over two years, and 15 applications asked for about 800 MW. The cap is a cabinet regulation, so the new government can change it. I'd like it replaced with a rule: a data centre can connect if it meets three terms.
+BC Hydro can offer new data centres at most 400 MW over two years, and 15 applications asked for about 800 MW. The cap is a cabinet regulation, so the new government can change it. I'd like it replaced with four terms for data centres.
 
 1. It pays for more new generation and transmission than it uses, with no subsidies and no cost passed to households, and cuts back when the grid is tight. First Nations should own part of the new power.
 2. It sets aside part of its space for Canadian-controlled computing, written into its BC Hydro contract.
 3. It protects our water, with sealed-loop cooling, metered use and public reporting.
+4. It pays property tax at an industrial rate, not the lower business rate it can pay today, as BC's municipalities asked in September (UBCM resolution NR68).
 
-They should also pay property tax at an industrial rate, not the lower business rate they can pay today. BC's municipalities asked the province for this in September (UBCM resolution NR68).
+Cabinet can do all four by regulation, without a new law.
 
 Will you raise this with the Energy Minister and support a "pay to connect" rule? I'd appreciate a reply with where you stand.
 
