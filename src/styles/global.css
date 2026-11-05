@@ -248,6 +248,7 @@ p.srcs, span.srcs { display: flex; flex-wrap: wrap; align-items: baseline; colum
 .opp-head { margin: 0 0 48px; max-width: 30ch; font-size: clamp(1.6rem, 3.2vw, 2.6rem); font-weight: 600; line-height: 1.15; color: var(--ice); }
 .opp-why { margin: 48px 0 0; max-width: var(--measure); color: var(--on-dark-2); }
 .opp-why strong { color: var(--ice); }
+.opp-why + .opp-why { margin-top: 16px; }
 .chart { margin: 0; }
 .chart-note {
   margin: 32px 0 0; padding-left: 16px; border-left: 4px solid var(--marker);
