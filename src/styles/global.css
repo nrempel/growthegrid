@@ -207,6 +207,9 @@ p { max-width: var(--measure); text-wrap: pretty; }
 .intro { margin-bottom: 48px; }
 .term-tag { margin: 0 0 12px; font-size: var(--fs-xs); font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; line-height: 1.2; color: var(--muted); }
 .section-lede { font-size: var(--fs-lg); margin: 24px 0 0; color: var(--fg-2); max-width: 52ch; }
+.section-lede p { margin: 0; }
+.section-lede p + p { margin-top: 12px; }
+.section-lede strong { color: var(--fg); }
 @media (min-width: 1000px) {
   .intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 88px); align-items: end; }
   .intro .section-lede { margin: 0; }
