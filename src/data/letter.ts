@@ -36,7 +36,7 @@ BC Hydro can offer new data centres at most 400 MW over two years, and 15 applic
 2. It sets aside part of its space for Canadian-controlled computing, written into its BC Hydro contract.
 3. It protects our water, with sealed-loop cooling, metered use and public reporting.
 
-They should also pay property tax like any other industry, as BC's municipalities asked in September.
+They should also pay property tax at an industrial rate, not the lower business rate they can pay today. BC's municipalities asked the province for this in September (UBCM resolution NR68).
 
 Will you raise this with the Energy Minister and support a "pay to connect" rule? I'd appreciate a reply with where you stand.
 
