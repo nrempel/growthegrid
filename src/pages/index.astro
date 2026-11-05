@@ -47,6 +47,13 @@ const U = {
   ireland: 'https://www.cru.ie/about-us/news/the-cru-publishes-its-decision-on-new-electricity-connection-policy-for-data-centres/',
   groundwater: 'https://www2.gov.bc.ca/gov/content/environment/air-land-water/water/groundwater-wells-aquifers/information-for-well-owners/well-records-registration/non-domestic-groundwater-use',
   statcan: 'https://www150.statcan.gc.ca/n1/pub/16-201-x/2017000/sec-2-eng.htm',
+  deficit: 'https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/quarterly-reports/2026-27_first_quarterly_report.pdf',
+  loudoun: 'https://www.loudoun.gov/6409/Data-Centers-Tax-Revenues-County-Budget',
+  loudounBudget: 'https://www.loudoun.gov/DocumentCenter/View/213222/FY-2026-Proposed-Budget-Presentation',
+  mackenzie: 'https://districtofmackenzie.ca/wp-content/uploads/2026/03/Council-Highlights-March-23-2026.pdf',
+  mackenzieRates: 'https://districtofmackenzie.ca/wp-content/uploads/2026/07/Bylaw.1535-Tax-Rate-2026.pdf',
+  ubcm: 'https://www.ubcm.ca/sites/default/files/2026-09/2026-UBCM-Resolutions-Disposition.pdf',
+  schoolTax: 'https://www2.gov.bc.ca/gov/content/taxes/property-taxes/annual-property-tax/school-tax',
   microsoft: 'https://www.microsoft.com/en-us/microsoft-cloud/blog/2024/12/09/sustainable-by-design-next-generation-datacenters-consume-zero-water-for-cooling/',
   ltep: 'https://www.bchydro.com/news/press_centre/news_releases/2025/ltep.html',
   shortfall: 'https://news.gov.bc.ca/releases/2026ECS0045-000916',
@@ -98,7 +105,7 @@ const bars = [
       <section class="numbers" id="numbers">
         <div class="wrap">
           <div class="opp">
-            <p class="opp-head">Data centres are lining up to build here. If they pay their way, BC gets more power, more jobs and more say over its data.</p>
+            <p class="opp-head">Data centres are lining up to build here. If they pay their way, BC gets more power, more jobs, more tax money and more say over its data.</p>
             <ul class="stats">
               <li>
                 <p class="stat-num"><span aria-hidden="true">~</span><span class="sr-only">about </span>800 MW</p>
@@ -256,6 +263,36 @@ const bars = [
               <p class="stat-num">Licensed</p>
               <p>Industry needs a provincial licence to draw groundwater or stream water, and BC can cut use in a drought, as it did at Bessette Creek in 2026. It can also require sealed-loop cooling.</p>
               <p class="srcs"><a href={U.groundwater} target="_blank" rel="noopener">Government of BC</a> <a href={U.drought} target="_blank" rel="noopener">BC Gov News, Aug 2026</a></p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="proof pillar-ice" id="tax">
+        <div class="wrap">
+          <div class="intro">
+            <h2>New tax money, not new costs.</h2>
+            <p class="section-lede">BC expects a $13.8 billion deficit this year. Data centres that pay for their own power add tax money for local services and schools, and BC can make sure they pay their full share. <span class="srcs"><a href={U.deficit} target="_blank" rel="noopener">BC First Quarterly Report, 2026/27</a></span></p>
+          </div>
+
+          <ul class="stats tax">
+            <li>
+              <p class="stat-label">It adds up</p>
+              <p class="stat-num">66¢</p>
+              <p>Loudoun County, Virginia, has the world’s biggest cluster of data centres. Their taxes are worth 66 cents of its property tax rate, and the county has cut that rate by 30% since 2016. Much of that comes from taxing the computers inside, which BC doesn’t do.</p>
+              <p class="srcs"><a href={U.loudounBudget} target="_blank" rel="noopener">Loudoun County budget, 2025</a> <a href={U.loudoun} target="_blank" rel="noopener">Loudoun County</a></p>
+            </li>
+            <li>
+              <p class="stat-label">BC charges less</p>
+              <p class="stat-num">~3×</p>
+              <p>BC has no property tax class for data centres, so they can be taxed as an ordinary business. In Mackenzie, the business rate is $10.46 per $1,000 of value. Light industry pays $30.53.</p>
+              <p class="srcs"><a href={U.mackenzie} target="_blank" rel="noopener">District of Mackenzie</a> <a href={U.mackenzieRates} target="_blank" rel="noopener">Mackenzie tax rates, 2026</a></p>
+            </li>
+            <li>
+              <p class="stat-label">The ask</p>
+              <p class="stat-num">Fair share</p>
+              <p>In September, BC’s municipalities voted to ask the province to tax data centres as light industry or utilities. That money pays for local services, and their school tax helps pay for education.</p>
+              <p class="srcs"><a href={U.ubcm} target="_blank" rel="noopener">UBCM 2026, resolution NR68</a> <a href={U.schoolTax} target="_blank" rel="noopener">Government of BC</a></p>
             </li>
           </ul>
         </div>

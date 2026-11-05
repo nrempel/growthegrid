@@ -113,6 +113,7 @@ Line drawings share one style: spruce strokes (pylons 2.2px), round joins and ca
 | Term 1 detail (`#deal`) | snow |
 | Term 2, data (`#sovereign`) | ice |
 | Term 3, water (`#water`) | snow |
+| Tax (`#tax`) | ice |
 | Wins (`#wins`) | spruce (`.band-dark`, the close before the action) |
 | Act (`#act`) | ice-2 (the one deeper band: the action) |
 | FAQ (`#faq`) | snow |
