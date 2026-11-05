@@ -59,7 +59,7 @@ One family, Archivo variable. Display = weight 850, width 62% (`font-stretch` pl
 | Body (`--fs-body`) | 1.0625rem | 400 | 1.6 | Everything else |
 | Small (`--fs-sm`) | 0.95rem | 400-700 | 1.6 | Buttons in rows, chips, hints, notes, warnings, letter |
 | Caption (`--fs-xs`) | 0.85rem | 400 | 1.6 | Sources, axis ticks, footer base |
-| Label (`--fs-xs`) | 0.85rem uppercase, 0.06em | 700 | 1.2 | Card labels, "Rule n", footer column heads |
+| Label (`--fs-xs`) | 0.85rem uppercase, 0.06em | 700 | 1.2 | Card labels, footer column heads |
 
 Text wraps with `text-wrap: balance` on headings and `pretty` on paragraphs, so no line ends on one word.
 
@@ -86,7 +86,7 @@ Scale: 4, 8, 12, 16, 24, 32, 40, 48, 72 px. Section and block rhythm use two tok
 - **Chip** `.chip` and the send-alt buttons: pill, 2px `--line` border, `--fs-sm` 600, 44px tall. `.chip-main` is the filled spruce primary chip.
 - **Field**: white, 2px `--line`, radius 6, spruce border on focus, orange (`--marker-ink`) when missing.
 - **Card** (every family: opportunity stats, "also", water, data, rules, wins): a list item with a 3px `--card-rule` top rule and 16px padding above, in this order:
-  1. label `.stat-label` (optional; rules show "Rule n" in the same style)
+  1. label `.stat-label` (optional; rules have none)
   2. big number `.stat-num` or title `.stat-title` / rule h3, 12px below
   3. text, `--fg-2`
   4. sources `.srcs`

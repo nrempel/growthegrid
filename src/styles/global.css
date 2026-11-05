@@ -216,7 +216,7 @@ p { max-width: var(--measure); text-wrap: pretty; }
 .stats { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px; }
 .stats > li, .rules > li { border-top: 3px solid var(--card-rule); padding-top: 16px; }
 .stats p, .rules p { margin: 0; color: var(--fg-2); }
-.stats .stat-label, .rules > li::before {
+.stats .stat-label {
   display: block; margin: 0 0 8px;
   font-size: var(--fs-xs); font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; line-height: 1.2; color: var(--muted);
 }
@@ -230,9 +230,7 @@ p { max-width: var(--measure); text-wrap: pretty; }
   font-weight: 850; font-stretch: 62%; font-variation-settings: 'wdth' 62;
   font-size: clamp(1.6rem, 2.4vw, 1.9rem); line-height: 1; color: var(--fg); text-wrap: balance;
 }
-.rules { list-style: none; counter-reset: term; padding: 0; margin: var(--block-gap) 0 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; }
-.rules > li { counter-increment: term; }
-.rules > li::before { content: 'Rule ' counter(term); }
+.rules { list-style: none; padding: 0; margin: var(--block-gap) 0 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; }
 .rules > li:last-child { grid-column: 1 / -1; }
 @media (max-width: 860px) { .stats, .rules { grid-template-columns: 1fr; } }
 
