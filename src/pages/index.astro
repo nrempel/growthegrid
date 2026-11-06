@@ -50,6 +50,7 @@ const U = {
   mackenzie: 'https://districtofmackenzie.ca/wp-content/uploads/2026/03/Council-Highlights-March-23-2026.pdf',
   mackenzieRates: 'https://districtofmackenzie.ca/wp-content/uploads/2026/07/Bylaw.1535-Tax-Rate-2026.pdf',
   classes: 'https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/438_81',
+  cfdInfo: 'https://app.bchydro.com/content/dam/BCHydro/customer-portal/documents/accounts-billing/electrical-connections/2026-cfd-info-session-2026feb09.pdf',
   direction8: 'https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/24_2019',
   uca: 'https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/96473_01',
   tariff: 'https://www.bchydro.com/content/dam/BCHydro/customer-portal/documents/corporate/tariff-filings/electric-tariff/bchydro-electric-tariff.pdf',
@@ -130,7 +131,7 @@ const bars = [
               </li>
             </ul>
             <p class="opp-why"><strong>The ask:</strong> replace today’s cap with four terms. A data centre brings more new power than it uses, sets aside space for Canadian computing, protects BC’s water, and pays BC its share.</p>
-            <p class="opp-why"><strong>Why now:</strong> the new government can do all of this without a new law, by changing two regulations: the one that caps data centre power and the one that sets property tax classes. BC Hydro will pick which projects get power once the new government is in place. <span class="srcs"><a href={U.reg} target="_blank" rel="noopener">B.C. Reg. 8/2026</a> <a href={U.classes} target="_blank" rel="noopener">B.C. Reg. 438/81</a> <a href={U.cfd} target="_blank" rel="noopener">BC Hydro</a></span></p>
+            <p class="opp-why"><strong>Why now:</strong> the new government can do all of this without a new law. Cabinet sets the data centre power rules, BC Hydro’s profit target and the property tax classes by regulation. BC Hydro will pick which projects get power once the new government is in place. <span class="srcs"><a href={U.reg} target="_blank" rel="noopener">B.C. Reg. 8/2026</a> <a href={U.classes} target="_blank" rel="noopener">B.C. Reg. 438/81</a> <a href={U.cfd} target="_blank" rel="noopener">BC Hydro</a> <a href={U.direction8} target="_blank" rel="noopener">B.C. Reg. 24/2019</a></span></p>
           </div>
           <div class="intro">
             <div><p class="term-tag">Term 1 of 4</p><h2>Bring more power than you use.</h2></div>
@@ -289,9 +290,9 @@ const bars = [
           <div class="intro">
             <div><p class="term-tag">Term 4 of 4</p><h2>Pay BC its share.</h2></div>
             <div class="section-lede">
-              <p><strong>Today:</strong> BC Hydro’s rates are set so it earns a fixed $712 million a year for the province, so charging data centres more doesn’t add to the provincial budget on its own. Data centres can also be taxed as an ordinary business, at a third to a half of the light industry rate in Mackenzie and Prince George.</p>
+              <p><strong>Today:</strong> data centres already bid at least 10% above BC Hydro’s standard industrial rate, but BC Hydro’s rates are set to earn a fixed $712 million a year for the province, so the extra doesn’t add to the provincial budget on its own. They can also be taxed as an ordinary business, at a third to a half of the light industry rate in Mackenzie and Prince George.</p>
               <p><strong>The ask:</strong> data centres pay a premium for BC’s clean power, set by competitive bids, and the premium goes to the provincial budget. They pay property tax at the light industry rate, and get no sales tax exemptions.</p>
-              <p><strong>Why:</strong> BC expects a $13.8 billion deficit this year, and data centres asked for twice the power BC can offer. They can pay more, and none of it has to come from households. <span class="srcs"><a href={U.direction8} target="_blank" rel="noopener">B.C. Reg. 24/2019</a> <a href={U.deficit} target="_blank" rel="noopener">BC First Quarterly Report, 2026/27</a> <a href={U.cfd} target="_blank" rel="noopener">BC Hydro</a> <a href={U.mackenzieRates} target="_blank" rel="noopener">Mackenzie tax rates, 2026</a> <a href="https://www.princegeorge.ca/sites/default/files/2026-05/BL9622_ADOPTED.pdf" target="_blank" rel="noopener">Prince George tax rates, 2026</a></span></p>
+              <p><strong>Why:</strong> BC expects a $13.8 billion deficit this year, and data centres asked for twice the power BC can offer. They can pay more, and none of it has to come from households. <span class="srcs"><a href={U.cfdInfo} target="_blank" rel="noopener">BC Hydro call info session</a> <a href={U.direction8} target="_blank" rel="noopener">B.C. Reg. 24/2019</a> <a href={U.deficit} target="_blank" rel="noopener">BC First Quarterly Report, 2026/27</a> <a href={U.cfd} target="_blank" rel="noopener">BC Hydro</a> <a href={U.mackenzieRates} target="_blank" rel="noopener">Mackenzie tax rates, 2026</a> <a href="https://www.princegeorge.ca/sites/default/files/2026-05/BL9622_ADOPTED.pdf" target="_blank" rel="noopener">Prince George tax rates, 2026</a></span></p>
             </div>
           </div>
 
@@ -299,7 +300,7 @@ const bars = [
             <li>
               <p class="stat-label">Our estimate, per year</p>
               <p class="stat-num">~$490M</p>
-              <p>A 1 GW campus like Meta’s in Alberta, running 90% of the time, uses about 7.9 TWh a year. At Hydro-Québec’s proposed data centre rate instead of BC’s standard industrial rate, the province would get about $490 million more a year. A 10% premium alone is about $50 million.</p>
+              <p>A 1 GW campus like Meta’s in Alberta, running 90% of the time, uses about 7.9 TWh a year. At Hydro-Québec’s proposed data centre rate instead of BC’s standard industrial rate, the province would get about $490 million more a year. Today’s 10% minimum is about $50 million.</p>
               <p class="srcs"><a href={U.meta} target="_blank" rel="noopener">Alberta Major Projects</a> <a href={U.tariff} target="_blank" rel="noopener">BC Hydro tariff, RS 1830</a> <a href={U.hqRate} target="_blank" rel="noopener">Hydro-Québec</a></p>
             </li>
             <li>
