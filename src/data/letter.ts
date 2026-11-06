@@ -39,7 +39,7 @@ BC Hydro can offer new data centres at most 400 MW over two years, and 15 applic
 
 Cabinet can do all four by regulation, without a new law.
 
-Will you raise this with the Energy Minister and support a "pay to connect" rule? I'd appreciate a reply with where you stand.
+Will you support these four terms and raise them with the ministers responsible? I'd appreciate a reply with where you stand.
 
 ${SIGN_MARK}${sign}`;
 }
