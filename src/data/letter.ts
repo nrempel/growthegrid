@@ -35,7 +35,7 @@ BC Hydro can offer new data centres at most 400 MW over two years, and 15 applic
 1. It pays for more new generation and transmission than it uses, with no subsidies and no cost passed to households, and cuts back when the grid is tight. First Nations should own part of the new power.
 2. It sets aside part of its space for Canadian-controlled computing, written into its BC Hydro contract.
 3. It protects our water, with sealed-loop cooling, metered use and public reporting.
-4. It pays property tax at an industrial rate, not the lower business rate it can pay today, as BC's municipalities asked in September (UBCM resolution NR68).
+4. It pays BC its share: a power premium that goes to the provincial budget, property tax at an industrial rate (UBCM resolution NR68), and no sales tax exemptions.
 
 Cabinet can do all four by regulation, without a new law.
 

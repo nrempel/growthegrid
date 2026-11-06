@@ -47,11 +47,16 @@ const U = {
   ireland: 'https://www.cru.ie/about-us/news/the-cru-publishes-its-decision-on-new-electricity-connection-policy-for-data-centres/',
   groundwater: 'https://www2.gov.bc.ca/gov/content/environment/air-land-water/water/groundwater-wells-aquifers/information-for-well-owners/well-records-registration/non-domestic-groundwater-use',
   statcan: 'https://www150.statcan.gc.ca/n1/pub/16-201-x/2017000/sec-2-eng.htm',
-  loudoun: 'https://www.loudoun.gov/6409/Data-Centers-Tax-Revenues-County-Budget',
-  loudounBudget: 'https://www.loudoun.gov/DocumentCenter/View/213222/FY-2026-Proposed-Budget-Presentation',
   mackenzie: 'https://districtofmackenzie.ca/wp-content/uploads/2026/03/Council-Highlights-March-23-2026.pdf',
   mackenzieRates: 'https://districtofmackenzie.ca/wp-content/uploads/2026/07/Bylaw.1535-Tax-Rate-2026.pdf',
   classes: 'https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/438_81',
+  direction8: 'https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/24_2019',
+  uca: 'https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/96473_01',
+  tariff: 'https://www.bchydro.com/content/dam/BCHydro/customer-portal/documents/corporate/tariff-filings/electric-tariff/bchydro-electric-tariff.pdf',
+  hqRate: 'https://news.hydroquebec.com/news/press-releases/all-quebec/hydro-quebec-proposing-regie-energie-new-rate-large-data-centres-adjustment-rate-cryptographic-use-applied-blockchains.html',
+  meta: 'https://majorprojects.alberta.ca/details/Meta-Data-Centre/12183',
+  pst110: 'https://www2.gov.bc.ca/assets/gov/taxes/sales-taxes/publications/pst-110-production-machinery-equipment-exemption.pdf',
+  deficit: 'https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/quarterly-reports/2026-27_first_quarterly_report.pdf',
   ubcm: 'https://www.ubcm.ca/sites/default/files/2026-09/2026-UBCM-Resolutions-Disposition.pdf',
   schoolTax: 'https://www2.gov.bc.ca/gov/content/taxes/property-taxes/annual-property-tax/school-tax',
   microsoft: 'https://www.microsoft.com/en-us/microsoft-cloud/blog/2024/12/09/sustainable-by-design-next-generation-datacenters-consume-zero-water-for-cooling/',
@@ -63,7 +68,7 @@ const reasons = [
   { tag: 'Term 1 · Power', text: 'I want data centres to pay their own way, not add to my power bill.' },
   { tag: 'Term 2 · Data', text: 'I want Canadian data kept under Canadian control.' },
   { tag: 'Term 3 · Water', text: 'I want BC’s water protected, with clear rules for every new site.' },
-  { tag: 'Term 4 · Tax', text: 'I want data centres to pay the same property tax rate as other industry.' },
+  { tag: 'Term 4 · BC’s share', text: 'I want data centres to pay BC its full share, not leave it to households.' },
   { tag: 'Jobs', text: 'I want the construction jobs and new power built here in BC.' },
 ];
 
@@ -106,7 +111,7 @@ const bars = [
       <section class="numbers" id="numbers">
         <div class="wrap">
           <div class="opp">
-            <p class="opp-head">Data centres are lining up to build here. If they pay their way, BC gets more power, more jobs, more tax money and more say over its data.</p>
+            <p class="opp-head">Data centres are lining up to build here. If they pay their way, BC gets more power, more jobs, more money for the province and more say over its data.</p>
             <ul class="stats">
               <li>
                 <p class="stat-num"><span aria-hidden="true">~</span><span class="sr-only">about </span>800 MW</p>
@@ -124,7 +129,7 @@ const bars = [
                 <p class="srcs"><a href="https://www.telus.com/en/about/news-and-events/media-releases/TELUS-and-Government-of-Canada-advance-work-to-scale-Canadas-sovereign-AI-infrastructure" target="_blank" rel="noopener">TELUS</a> <a href={U.call} target="_blank" rel="noopener">BC Gov News, May 2026</a></p>
               </li>
             </ul>
-            <p class="opp-why"><strong>The ask:</strong> replace today’s cap with four terms. A data centre brings more new power than it uses, sets aside space for Canadian computing, protects BC’s water, and pays tax like any other industry.</p>
+            <p class="opp-why"><strong>The ask:</strong> replace today’s cap with four terms. A data centre brings more new power than it uses, sets aside space for Canadian computing, protects BC’s water, and pays BC its share.</p>
             <p class="opp-why"><strong>Why now:</strong> the new government can do all of this without a new law, by changing two regulations: the one that caps data centre power and the one that sets property tax classes. BC Hydro will pick which projects get power once the new government is in place. <span class="srcs"><a href={U.reg} target="_blank" rel="noopener">B.C. Reg. 8/2026</a> <a href={U.classes} target="_blank" rel="noopener">B.C. Reg. 438/81</a> <a href={U.cfd} target="_blank" rel="noopener">BC Hydro</a></span></p>
           </div>
           <div class="intro">
@@ -282,32 +287,32 @@ const bars = [
       <section class="proof pillar-ice" id="tax">
         <div class="wrap">
           <div class="intro">
-            <div><p class="term-tag">Term 4 of 4</p><h2>Pay tax like any other industry.</h2></div>
+            <div><p class="term-tag">Term 4 of 4</p><h2>Pay BC its share.</h2></div>
             <div class="section-lede">
-              <p><strong>Today:</strong> BC has no property tax class for data centres, so they can be taxed as an ordinary business. In Mackenzie and Prince George, that rate is a third to a half of the light industry rate.</p>
-              <p><strong>The ask:</strong> tax data centres as light industry, as BC’s municipalities asked in September.</p>
-              <p><strong>Why:</strong> the town or city that hosts a data centre gets major new money for local services, and room to cut everyone else’s property tax. That is what happened in Loudoun County, Virginia. <span class="srcs"><a href={U.mackenzieRates} target="_blank" rel="noopener">Mackenzie tax rates, 2026</a> <a href="https://www.princegeorge.ca/sites/default/files/2026-05/BL9622_ADOPTED.pdf" target="_blank" rel="noopener">Prince George tax rates, 2026</a> <a href={U.loudoun} target="_blank" rel="noopener">Loudoun County</a></span></p>
+              <p><strong>Today:</strong> BC Hydro’s rates are set so it earns a fixed $712 million a year for the province, so charging data centres more doesn’t add to the provincial budget on its own. Data centres can also be taxed as an ordinary business, at a third to a half of the light industry rate in Mackenzie and Prince George.</p>
+              <p><strong>The ask:</strong> data centres pay a premium for BC’s clean power, set by competitive bids, and the premium goes to the provincial budget. They pay property tax at the light industry rate, and get no sales tax exemptions.</p>
+              <p><strong>Why:</strong> BC expects a $13.8 billion deficit this year, and data centres asked for twice the power BC can offer. They can pay more, and none of it has to come from households. <span class="srcs"><a href={U.direction8} target="_blank" rel="noopener">B.C. Reg. 24/2019</a> <a href={U.deficit} target="_blank" rel="noopener">BC First Quarterly Report, 2026/27</a> <a href={U.cfd} target="_blank" rel="noopener">BC Hydro</a> <a href={U.mackenzieRates} target="_blank" rel="noopener">Mackenzie tax rates, 2026</a> <a href="https://www.princegeorge.ca/sites/default/files/2026-05/BL9622_ADOPTED.pdf" target="_blank" rel="noopener">Prince George tax rates, 2026</a></span></p>
             </div>
           </div>
 
           <ul class="stats tax">
             <li>
-              <p class="stat-label">It adds up</p>
-              <p class="stat-num">66¢</p>
-              <p>Loudoun County, Virginia, has the world’s biggest cluster of data centres. Their taxes are worth 66 cents of its property tax rate, and the county has cut that rate by 30% since 2016. Much of that comes from taxing the computers inside, which BC doesn’t do.</p>
-              <p class="srcs"><a href={U.loudounBudget} target="_blank" rel="noopener">Loudoun County budget, 2025</a> <a href={U.loudoun} target="_blank" rel="noopener">Loudoun County</a></p>
+              <p class="stat-label">Our estimate, per year</p>
+              <p class="stat-num">~$490M</p>
+              <p>A 1 GW campus like Meta’s in Alberta, running 90% of the time, uses about 7.9 TWh a year. At Hydro-Québec’s proposed data centre rate instead of BC’s standard industrial rate, the province would get about $490 million more a year. A 10% premium alone is about $50 million.</p>
+              <p class="srcs"><a href={U.meta} target="_blank" rel="noopener">Alberta Major Projects</a> <a href={U.tariff} target="_blank" rel="noopener">BC Hydro tariff, RS 1830</a> <a href={U.hqRate} target="_blank" rel="noopener">Hydro-Québec</a></p>
             </li>
             <li>
-              <p class="stat-label">In Mackenzie</p>
+              <p class="stat-label">For host towns</p>
               <p class="stat-num">$10 vs $31</p>
-              <p>Mackenzie’s property tax per $1,000 of value: $10.46 for an ordinary business, $30.53 for light industry.</p>
+              <p>Mackenzie’s property tax per $1,000 of value: $10.46 for an ordinary business, $30.53 for light industry. That money pays for local services.</p>
               <p class="srcs"><a href={U.mackenzie} target="_blank" rel="noopener">District of Mackenzie</a> <a href={U.mackenzieRates} target="_blank" rel="noopener">Mackenzie tax rates, 2026</a></p>
             </li>
             <li>
               <p class="stat-label">How it happens</p>
               <p class="stat-num">No new law</p>
-              <p>Cabinet sets the property tax classes by regulation, so it can move data centres into light industry without a new law. BC’s municipalities asked for this in September. The extra money goes to local services.</p>
-              <p class="srcs"><a href={U.classes} target="_blank" rel="noopener">B.C. Reg. 438/81</a> <a href={U.ubcm} target="_blank" rel="noopener">UBCM 2026, resolution NR68</a></p>
+              <p>Cabinet sets the data centre power rate and BC Hydro’s profit target by regulation, and the property tax classes too. BC’s municipalities asked for the tax change in September. Keeping sales tax on their equipment needs no action at all.</p>
+              <p class="srcs"><a href={U.uca} target="_blank" rel="noopener">Utilities Commission Act, s. 21.1</a> <a href={U.classes} target="_blank" rel="noopener">B.C. Reg. 438/81</a> <a href={U.ubcm} target="_blank" rel="noopener">UBCM 2026, resolution NR68</a> <a href={U.pst110} target="_blank" rel="noopener">PST Bulletin 110</a></p>
             </li>
           </ul>
         </div>
@@ -334,7 +339,7 @@ const bars = [
             <li>
               <p class="stat-label">Data centres</p>
               <p class="stat-num">~800 MW</p>
-              <p>asked for, with 400 on offer. A clear rule gives them a way in: bring more power than you use, keep Canadian data in Canadian hands, protect BC’s water, pay tax like any other industry, and you can connect.</p>
+              <p>asked for, with 400 on offer. A clear rule gives them a way in: bring more power than you use, keep Canadian data in Canadian hands, protect BC’s water, pay BC its share, and you can connect.</p>
               <p class="srcs"><a href={U.cfd} target="_blank" rel="noopener">BC Hydro, 2026 Call for Demand</a></p>
             </li>
           </ul>
@@ -467,7 +472,7 @@ const bars = [
             </details>
             <details>
               <summary>Do data centres create jobs?</summary>
-              <p>Yes, and lots of them while they’re built. Meta’s Alberta campus needs more than 3,000 construction workers at its peak, then 300 permanent staff. TELUS expects more than 1,000 construction jobs at its BC sites, plus hundreds of operations roles. The new power adds more: BC Hydro’s 2025 call for power is expected to create 1,500 jobs. Data centres also pay property tax, and this campaign asks that they pay the same rate as other industry: see <a href="#tax">term 4</a>.
+              <p>Yes, and lots of them while they’re built. Meta’s Alberta campus needs more than 3,000 construction workers at its peak, then 300 permanent staff. TELUS expects more than 1,000 construction jobs at its BC sites, plus hundreds of operations roles. The new power adds more: BC Hydro’s 2025 call for power is expected to create 1,500 jobs. Data centres also pay property tax, and this campaign asks that they pay the industry rate, plus a premium on power that goes to the provincial budget: see <a href="#tax">term 4</a>.
                 <span class="srcs"><a href="https://majorprojects.alberta.ca/details/Meta-Data-Centre/12183" target="_blank" rel="noopener">Alberta Major Projects</a> <a href="https://www.telus.com/en/about/news-and-events/media-releases/TELUS-and-Government-of-Canada-advance-work-to-scale-Canadas-sovereign-AI-infrastructure" target="_blank" rel="noopener">TELUS</a> <a href={U.call} target="_blank" rel="noopener">BC Gov News</a></span></p>
             </details>
             <details>
