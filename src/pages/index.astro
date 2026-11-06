@@ -61,11 +61,11 @@ const U = {
 };
 
 const reasons = [
-  'I want data centres to pay their own way, not add to my power bill.',
-  'I want BC’s water protected, with clear rules for every new site.',
-  'I want Canadian data kept under Canadian control.',
-  'I want the construction jobs and new power built here in BC.',
-  'I want data centres to pay the same property tax rate as other industry.',
+  { tag: 'Term 1 · Power', text: 'I want data centres to pay their own way, not add to my power bill.' },
+  { tag: 'Term 2 · Data', text: 'I want Canadian data kept under Canadian control.' },
+  { tag: 'Term 3 · Water', text: 'I want BC’s water protected, with clear rules for every new site.' },
+  { tag: 'Term 4 · Tax', text: 'I want data centres to pay the same property tax rate as other industry.' },
+  { tag: 'Jobs', text: 'I want the construction jobs and new power built here in BC.' },
 ];
 
 // Bars are drawn on a 0–1,000 MW scale. Sources: B.C. Reg. 8/2026, BC Hydro 2026 Call for Demand, Alberta Major Projects.
@@ -394,11 +394,11 @@ const bars = [
               <label for="sender-address">Your street address</label>
               <p class="opt hint" id="address-hint">So the office knows you’re a constituent. Like 123 Main St, Victoria.</p>
               <input id="sender-address" autocomplete="street-address" aria-describedby="address-hint" />
-              <label for="sender-why">What’s one thing about where you live or work that this affects?</label>
-              <p class="opt hint" id="why-hint">Optional. One sentence in your own words helps your letter stand out. Or tap a reason below to start from.</p>
+              <label for="sender-why">Which part matters most to you?</label>
+              <p class="opt hint" id="why-hint">Optional. Tap one to start, or write your own. One sentence in your own words helps your letter stand out.</p>
               <input id="sender-why" maxlength="200" aria-describedby="why-hint" placeholder="I work in Kamloops, and…" />
               <div class="reasons" role="group" aria-label="Reasons you can start from">
-                {reasons.map((r) => <button class="chip reason" type="button" aria-pressed="false">{r}</button>)}
+                {reasons.map((r) => <button class="chip reason" type="button" aria-pressed="false" data-text={r.text}><span class="reason-tag">{r.tag}</span><span>{r.text}</span></button>)}
               </div>
               <label for="letter">Your letter <span class="opt">edit anything you like</span></label>
               <textarea id="letter" rows="14"></textarea>

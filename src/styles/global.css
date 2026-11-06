@@ -445,6 +445,9 @@ textarea { line-height: 1.55; font-size: var(--fs-sm); resize: vertical; }
 .reasons { display: flex; flex-direction: column; gap: 8px; margin: 12px 0 24px; }
 .chip.reason { justify-content: flex-start; text-align: left; border-radius: var(--r-md); padding: 10px 14px; line-height: 1.3; font-weight: 500; }
 .reason[aria-pressed='true'] { background: var(--spruce); color: var(--ice); border-color: var(--spruce); }
+.chip.reason { flex-direction: column; align-items: flex-start; gap: 2px; }
+.reason-tag { font-size: var(--fs-xs); font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.reason[aria-pressed='true'] .reason-tag { color: var(--ice); }
 
 /* ---------- faq ---------- */
 .faq-grid { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: clamp(32px, 6vw, 88px); }

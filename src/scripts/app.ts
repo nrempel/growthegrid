@@ -231,11 +231,11 @@
       // A chip fills the personal sentence; the visitor can still edit it, and the chip lets go when the text no longer matches.
       const why = $<HTMLInputElement>('sender-why');
       const chips = [...document.querySelectorAll<HTMLButtonElement>('.reason')];
-      const syncChips = () => chips.forEach((c) => c.setAttribute('aria-pressed', String(!!why.value && why.value === c.textContent)));
+      const syncChips = () => chips.forEach((c) => c.setAttribute('aria-pressed', String(!!why.value && why.value === c.dataset.text)));
       for (const c of chips) {
         c.addEventListener('click', () => {
           const on = c.getAttribute('aria-pressed') === 'true';
-          why.value = on ? '' : c.textContent ?? '';
+          why.value = on ? '' : c.dataset.text ?? '';
           why.dispatchEvent(new Event('input', { bubbles: true }));
         });
       }
