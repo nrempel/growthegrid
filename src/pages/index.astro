@@ -47,16 +47,13 @@ const U = {
   ireland: 'https://www.cru.ie/about-us/news/the-cru-publishes-its-decision-on-new-electricity-connection-policy-for-data-centres/',
   groundwater: 'https://www2.gov.bc.ca/gov/content/environment/air-land-water/water/groundwater-wells-aquifers/information-for-well-owners/well-records-registration/non-domestic-groundwater-use',
   statcan: 'https://www150.statcan.gc.ca/n1/pub/16-201-x/2017000/sec-2-eng.htm',
-  mackenzie: 'https://districtofmackenzie.ca/wp-content/uploads/2026/03/Council-Highlights-March-23-2026.pdf',
   mackenzieRates: 'https://districtofmackenzie.ca/wp-content/uploads/2026/07/Bylaw.1535-Tax-Rate-2026.pdf',
   classes: 'https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/438_81',
   cfdInfo: 'https://app.bchydro.com/content/dam/BCHydro/customer-portal/documents/accounts-billing/electrical-connections/2026-cfd-info-session-2026feb09.pdf',
   direction8: 'https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/24_2019',
-  uca: 'https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/96473_01',
   tariff: 'https://www.bchydro.com/content/dam/BCHydro/customer-portal/documents/corporate/tariff-filings/electric-tariff/bchydro-electric-tariff.pdf',
   hqRate: 'https://news.hydroquebec.com/news/press-releases/all-quebec/hydro-quebec-proposing-regie-energie-new-rate-large-data-centres-adjustment-rate-cryptographic-use-applied-blockchains.html',
   meta: 'https://majorprojects.alberta.ca/details/Meta-Data-Centre/12183',
-  pst110: 'https://www2.gov.bc.ca/assets/gov/taxes/sales-taxes/publications/pst-110-production-machinery-equipment-exemption.pdf',
   deficit: 'https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/quarterly-reports/2026-27_first_quarterly_report.pdf',
   ubcm: 'https://www.ubcm.ca/sites/default/files/2026-09/2026-UBCM-Resolutions-Disposition.pdf',
   schoolTax: 'https://www2.gov.bc.ca/gov/content/taxes/property-taxes/annual-property-tax/school-tax',
@@ -293,31 +290,31 @@ const bars = [
           <div class="intro intro-term">
             <div><p class="term-tag">Term 4 of 4</p><h2>Pay BC its share.</h2></div>
             <div class="tay">
-              <div><p class="tay-label">Today</p><p>Data centres already bid 10% above BC Hydro’s standard rate, but a fixed profit target means the extra doesn’t add to the provincial budget. They can also be taxed as an ordinary business, not as industry.</p></div>
-              <div class="tay-ask"><p class="tay-label">The ask</p><p>Charge more for power and send the premium to the provincial budget. Tax data centres like industry, with no sales tax breaks.</p></div>
-              <div><p class="tay-label">Why</p><p>BC faces a $13.8 billion deficit, and data centres asked for twice the power BC can offer. They can pay more, so households don’t have to.</p></div>
+              <div><p class="tay-label">Today</p><p>Data centres want twice the power BC can offer, and already bid at least 10% over the standard industrial rate. Under today’s rules, that extra money doesn’t reach the provincial budget.</p></div>
+              <div class="tay-ask"><p class="tay-label">The ask</p><p>Let data centres bid for BC’s power, and send everything above the standard rate to the provincial budget. Tax them like industry.</p></div>
+              <div><p class="tay-label">Why</p><p>BC’s clean power is scarce. Selling it at its real value helps close a $13.8 billion deficit and pays for local services, without raising anyone else’s bills.</p></div>
             </div>
-            <p class="srcs"><a href={U.cfdInfo} target="_blank" rel="noopener">BC Hydro call info session</a> <a href={U.direction8} target="_blank" rel="noopener">B.C. Reg. 24/2019</a> <a href={U.deficit} target="_blank" rel="noopener">BC First Quarterly Report, 2026/27</a> <a href={U.cfd} target="_blank" rel="noopener">BC Hydro</a> <a href={U.mackenzieRates} target="_blank" rel="noopener">Mackenzie tax rates, 2026</a> <a href="https://www.princegeorge.ca/sites/default/files/2026-05/BL9622_ADOPTED.pdf" target="_blank" rel="noopener">Prince George tax rates, 2026</a></p>
+            <p class="srcs"><a href={U.cfd} target="_blank" rel="noopener">BC Hydro</a> <a href={U.cfdInfo} target="_blank" rel="noopener">BC Hydro call info session</a> <a href={U.direction8} target="_blank" rel="noopener">B.C. Reg. 24/2019</a> <a href={U.deficit} target="_blank" rel="noopener">BC First Quarterly Report, 2026/27</a></p>
           </div>
 
           <ul class="stats tax">
             <li>
-              <p class="stat-label">Our estimate, per year</p>
-              <p class="stat-num">~$490M</p>
-              <p>A 1 GW campus like Meta’s in Alberta, running 90% of the time, uses about 7.9 TWh a year. At Hydro-Québec’s proposed data centre rate instead of BC’s standard industrial rate, the province would get about $490 million more a year. Today’s 10% minimum is about $50 million.</p>
+              <p class="stat-label">Quebec already plans it</p>
+              <p class="stat-num">13¢/kWh</p>
+              <p>Hydro-Québec proposes charging new data centres about double what its other large customers pay.</p>
+              <p class="srcs"><a href={U.hqRate} target="_blank" rel="noopener">Hydro-Québec</a></p>
+            </li>
+            <li>
+              <p class="stat-label">One big campus, our estimate</p>
+              <p class="stat-num">~$490M/yr</p>
+              <p>A 1 GW campus like Meta’s in Alberta, paying Quebec’s proposed rate instead of BC’s standard rate, would add about $490 million a year. Today’s 10% minimum adds about $50 million.</p>
               <p class="srcs"><a href={U.meta} target="_blank" rel="noopener">Alberta Major Projects</a> <a href={U.tariff} target="_blank" rel="noopener">BC Hydro tariff, RS 1830</a> <a href={U.hqRate} target="_blank" rel="noopener">Hydro-Québec</a></p>
             </li>
             <li>
               <p class="stat-label">For host towns</p>
-              <p class="stat-num">$10 vs $31</p>
-              <p>Mackenzie’s property tax per $1,000 of value: $10.46 for an ordinary business, $30.53 for light industry. That money pays for local services.</p>
-              <p class="srcs"><a href={U.mackenzie} target="_blank" rel="noopener">District of Mackenzie</a> <a href={U.mackenzieRates} target="_blank" rel="noopener">Mackenzie tax rates, 2026</a></p>
-            </li>
-            <li>
-              <p class="stat-label">How it happens</p>
-              <p class="stat-num">No new law</p>
-              <p>Cabinet sets the data centre power rate and BC Hydro’s profit target by regulation, and the property tax classes too. BC’s municipalities asked for the tax change in September. Keeping sales tax on their equipment needs no action at all.</p>
-              <p class="srcs"><a href={U.uca} target="_blank" rel="noopener">Utilities Commission Act, s. 21.1</a> <a href={U.classes} target="_blank" rel="noopener">B.C. Reg. 438/81</a> <a href={U.ubcm} target="_blank" rel="noopener">UBCM 2026, resolution NR68</a> <a href={U.pst110} target="_blank" rel="noopener">PST Bulletin 110</a></p>
+              <p class="stat-num">2–3× more</p>
+              <p>Taxed as light industry instead of an ordinary business, a data centre pays its town two to three times as much property tax in Mackenzie and Prince George. BC’s municipalities asked for this in September.</p>
+              <p class="srcs"><a href={U.mackenzieRates} target="_blank" rel="noopener">Mackenzie tax rates, 2026</a> <a href="https://www.princegeorge.ca/sites/default/files/2026-05/BL9622_ADOPTED.pdf" target="_blank" rel="noopener">Prince George tax rates, 2026</a> <a href={U.ubcm} target="_blank" rel="noopener">UBCM 2026, resolution NR68</a></p>
             </li>
           </ul>
         </div>
