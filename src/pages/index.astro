@@ -12,8 +12,8 @@ const shareBubbles = socialLinks(Astro.site?.toString() ?? 'https://growthegrid.
 const ridings = Object.keys(mlas).sort((a, b) => a.localeCompare(b));
 const title = 'Let data centres build BC’s next power plant | Grow the Grid BC';
 const description =
-  'Data centres want to build in BC. Ask your MLA to let them in if they bring more new power than they use, so BC gets a bigger grid. Find your MLA by postal code.';
-const ogDescription = 'Let data centres build in BC if they bring more new power than they use. Ask your MLA. Takes about a minute.';
+  'Data centres want to build in BC. Ask your MLA to let them in if they bring 20% more new power than they use, so BC gets a bigger grid. Find your MLA by postal code.';
+const ogDescription = 'Let data centres build in BC if they bring 20% more new power than they use. Ask your MLA. Takes about a minute.';
 const site = Astro.site?.toString() ?? 'https://growthegrid.ca/';
 const jsonLd = JSON.stringify({
   '@context': 'https://schema.org',
@@ -95,7 +95,7 @@ const bars = [
         <div class="wrap hero-copy">
           <h1>Let data centres build BC’s next power plant.</h1>
           <p class="lede">
-            Data centres want to build in BC. Let’s say yes, as long as they bring more new power than they use.
+            Data centres want to build in BC. Let’s say yes, as long as they bring 20% more new power than they use.
             The extra goes to everyone, so BC gets a bigger grid.
           </p>
           <div class="hero-lookup">
@@ -128,17 +128,17 @@ const bars = [
                 <p class="srcs"><a href="https://www.telus.com/en/about/news-and-events/media-releases/TELUS-and-Government-of-Canada-advance-work-to-scale-Canadas-sovereign-AI-infrastructure" target="_blank" rel="noopener">TELUS</a> <a href={U.call} target="_blank" rel="noopener">BC Gov News, May 2026</a></p>
               </li>
             </ul>
-            <p class="opp-why"><strong>The ask:</strong> replace today’s cap with four terms. A data centre brings more new power than it uses, sets aside space for Canadian computing, protects BC’s water, and pays BC its share.</p>
+            <p class="opp-why"><strong>The ask:</strong> replace today’s cap with four terms. A data centre brings 20% more new power than it uses, sets aside space for Canadian computing, protects BC’s water, and pays BC its share.</p>
             <p class="opp-why"><strong>Why now:</strong> the new government can do all of this without a new law. Cabinet sets the data centre power rules, BC Hydro’s profit target and the property tax classes by regulation. BC Hydro will pick which projects get power once the new government is in place. <span class="srcs"><a href={U.reg} target="_blank" rel="noopener">B.C. Reg. 8/2026</a> <a href={U.classes} target="_blank" rel="noopener">B.C. Reg. 438/81</a> <a href={U.cfd} target="_blank" rel="noopener">BC Hydro</a> <a href={U.direction8} target="_blank" rel="noopener">B.C. Reg. 24/2019</a></span></p>
           </div>
           <div class="intro intro-term">
-            <div><p class="term-tag">Term 1 of 4</p><h2>Bring more power than you use.</h2></div>
+            <div><p class="term-tag">Term 1 of 4</p><h2>Bring 20% more power than you use.</h2></div>
             <div class="tay">
               <div><p class="tay-label">Today</p><p>A provincial rule lets new data centres share at most 400 MW of BC’s existing power, half of what they asked for.</p></div>
-              <div class="tay-ask"><p class="tay-label">The ask</p><p>Let a data centre connect if it pays for more new power than it uses.</p></div>
-              <div><p class="tay-label">Why</p><p>Each one grows the grid instead of using it up, and the extra goes to homes and businesses.</p></div>
+              <div class="tay-ask"><p class="tay-label">The ask</p><p>Let a data centre connect if it pays for 20% more new clean power than it uses. The extra goes to BC homes.</p></div>
+              <div><p class="tay-label">Why</p><p>Each one grows the grid instead of using it up. For a campus like Meta’s in Alberta, the extra is about 158,000 homes’ worth of power a year, our estimate.</p></div>
             </div>
-            <p class="srcs"><a href={U.reg} target="_blank" rel="noopener">B.C. Reg. 8/2026</a> <a href={U.cfd} target="_blank" rel="noopener">BC Hydro</a></p>
+            <p class="srcs"><a href={U.reg} target="_blank" rel="noopener">B.C. Reg. 8/2026</a> <a href={U.cfd} target="_blank" rel="noopener">BC Hydro</a> <a href={U.meta} target="_blank" rel="noopener">Alberta Major Projects</a> <a href={U.call} target="_blank" rel="noopener">BC’s 2025 call for power</a></p>
           </div>
 
           <figure class="chart" aria-label="Data centre power in megawatts">
@@ -198,7 +198,7 @@ const bars = [
           <ol class="rules">
             <li>
               <h3>Pay for new power and lines</h3>
-              <p>To plug in, a data centre pays for more new power and power lines than it will use, under a long-term contract. The extra goes to everyone else. BC already does a version of this: when a new load is over about 150 MW, the grid upgrades it helps pay for under BC Hydro’s tariff can include new generation. Data centres asked for twice the power BC can offer, so BC can set the bar.</p>
+              <p>To plug in, a data centre pays for 20% more new power than it will use, plus the power lines, under a long-term contract. The extra goes to everyone else. BC already does a version of this: when a new load is over about 150 MW, the grid upgrades it helps pay for under BC Hydro’s tariff can include new generation. Data centres asked for twice the power BC can offer, so BC can set the bar.</p>
               <p class="srcs"><a href="https://app.bchydro.com/content/dam/hydro/medialib/internet/documents/appcontent/your_account/Electric_Tariff_Supplement_Number_6.pdf" target="_blank" rel="noopener">BC Hydro Tariff Supplement 6</a> <a href={U.ohio} target="_blank" rel="noopener">AEP Ohio</a> <a href={U.ireland} target="_blank" rel="noopener">CRU, Ireland’s regulator, Dec 2025</a></p>
             </li>
             <li>
@@ -324,7 +324,7 @@ const bars = [
             <li>
               <p class="stat-label">Households</p>
               <p class="stat-num">88%</p>
-              <p>of British Columbians in a July 2026 Leger poll worry that AI data centres could raise their power bills. Under this deal, data centres bring more new power than they use, so the grid grows and your bill doesn’t pay for their share.</p>
+              <p>of British Columbians in a July 2026 Leger poll worry that AI data centres could raise their power bills. Under this deal, data centres bring 20% more new power than they use, so the grid grows and your bill doesn’t pay for their share.</p>
               <p class="srcs"><a href={U.leger} target="_blank" rel="noopener">Leger, July 2026</a> <span>(BC sample: 151 people)</span></p>
             </li>
             <li>
@@ -336,7 +336,7 @@ const bars = [
             <li>
               <p class="stat-label">Data centres</p>
               <p class="stat-num">~800 MW</p>
-              <p>asked for, with 400 on offer. A clear rule gives them a way in: bring more power than you use, keep Canadian data in Canadian hands, protect BC’s water, pay BC its share, and you can connect.</p>
+              <p>asked for, with 400 on offer. A clear rule gives them a way in: bring 20% more power than you use, keep Canadian data in Canadian hands, protect BC’s water, pay BC its share, and you can connect.</p>
               <p class="srcs"><a href={U.cfd} target="_blank" rel="noopener">BC Hydro, 2026 Call for Demand</a></p>
             </li>
           </ul>
@@ -440,12 +440,12 @@ const bars = [
           <div>
             <details>
               <summary>Won’t data centres raise my hydro bill?</summary>
-              <p>They can, if they connect without paying for the new supply they need. In some US states, bills have risen with data centre growth. The energy minister pointed to this in October 2025, when BC debated Bill 31, the law behind the cap. This campaign asks for the opposite: data centres pay for more new generation and transmission than they use, so the grid grows without raising your bill.
+              <p>They can, if they connect without paying for the new supply they need. In some US states, bills have risen with data centre growth. The energy minister pointed to this in October 2025, when BC debated Bill 31, the law behind the cap. This campaign asks for the opposite: data centres pay for 20% more new generation than they use, plus the transmission, so the grid grows without raising your bill.
                 <span class="srcs"><a href="https://lims.leg.bc.ca/hdms/file/Debates/43rd1st/20251023pm-Hansard-n88.html" target="_blank" rel="noopener">Hansard, Oct 23, 2025</a></span></p>
             </details>
             <details>
               <summary>Don’t we normally share the cost of new power?</summary>
-              <p>For most customers, yes. The biggest ones already pay more. BC Hydro’s tariff makes a large industrial customer pay for its own line to the grid, and when a new load is over about 150 MW, the upgrades it helps pay for can include new generation. Today’s cap keeps each data centre project at 145 MW, close to that line. Some remote mines build their own power: the Diavik diamond mine in the Northwest Territories added a wind farm that covers part of its needs. This campaign asks data centres to go further at grid scale: pay for more new power than they use.
+              <p>For most customers, yes. The biggest ones already pay more. BC Hydro’s tariff makes a large industrial customer pay for its own line to the grid, and when a new load is over about 150 MW, the upgrades it helps pay for can include new generation. Today’s cap keeps each data centre project at 145 MW, close to that line. Some remote mines build their own power: the Diavik diamond mine in the Northwest Territories added a wind farm that covers part of its needs. This campaign asks data centres to go further at grid scale: pay for 20% more new power than they use.
                 <span class="srcs"><a href="https://app.bchydro.com/content/dam/hydro/medialib/internet/documents/appcontent/your_account/Electric_Tariff_Supplement_Number_6.pdf" target="_blank" rel="noopener">BC Hydro Tariff Supplement 6</a> <a href={U.reg} target="_blank" rel="noopener">B.C. Reg. 8/2026</a> <a href="https://natural-resources.canada.ca/maps-tools-publications/publications/diavik-diamond-mine-northwest-territories" target="_blank" rel="noopener">Natural Resources Canada</a></span></p>
             </details>
             <details>
@@ -455,7 +455,7 @@ const bars = [
             </details>
             <details>
               <summary>Isn’t AI bad for the environment?</summary>
-              <p>It uses a lot of power. Data centres used about 1.5% of the world’s electricity in 2024, and the International Energy Agency expects their electricity use to more than double by 2030. They will be built somewhere either way. About 98% of the electricity BC Hydro generates comes from clean or renewable sources, and under this deal each data centre would also pay for more new clean power than it uses and follow strict water rules. Whatever you think of AI, that’s better than the same computing running on fossil fuels somewhere else.
+              <p>It uses a lot of power. Data centres used about 1.5% of the world’s electricity in 2024, and the International Energy Agency expects their electricity use to more than double by 2030. They will be built somewhere either way. About 98% of the electricity BC Hydro generates comes from clean or renewable sources, and under this deal each data centre would also pay for 20% more new clean power than it uses and follow strict water rules. Whatever you think of AI, that’s better than the same computing running on fossil fuels somewhere else.
                 <span class="srcs"><a href="https://www.iea.org/reports/energy-and-ai/executive-summary" target="_blank" rel="noopener">IEA, Energy and AI</a> <a href={U.shortfall} target="_blank" rel="noopener">BC Gov News, Aug 2026</a></span></p>
             </details>
             <details>
@@ -484,7 +484,7 @@ const bars = [
             </details>
             <details>
               <summary>What kind of power would they pay for?</summary>
-              <p>New clean power, and BC Hydro picks the mix. Its 2025 call for power picked four wind projects, and it calls onshore wind its lowest-cost new energy. It is also adding a sixth generating unit at Revelstoke. Under this deal, data centres pay for more new power than they use.
+              <p>New clean power, and BC Hydro picks the mix. Its 2025 call for power picked four wind projects, and it calls onshore wind its lowest-cost new energy. It is also adding a sixth generating unit at Revelstoke. Under this deal, data centres pay for 20% more new power than they use.
                 <span class="srcs"><a href={U.call} target="_blank" rel="noopener">BC Gov News, May 2026</a> <a href={U.irp} target="_blank" rel="noopener">BC Hydro 2025 plan</a></span></p>
             </details>
             <details>

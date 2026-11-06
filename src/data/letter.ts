@@ -32,7 +32,7 @@ I live in ${opts.riding}, and I'm writing about BC's cap on power for new data c
 
 BC Hydro can offer new data centres at most 400 MW over two years, and 15 applications asked for about 800 MW. The cap is a cabinet regulation, so the new government can change it. I'd like it replaced with four terms for data centres.
 
-1. It pays for more new generation and transmission than it uses, with no subsidies and no cost passed to households, and cuts back when the grid is tight. First Nations should own part of the new power.
+1. It pays for 20% more new generation than it uses, plus the transmission, with no subsidies and no cost passed to households, and cuts back when the grid is tight. First Nations should own part of the new power.
 2. It sets aside part of its space for Canadian-controlled computing, written into its BC Hydro contract.
 3. It protects our water, with sealed-loop cooling, metered use and public reporting.
 4. It pays BC its share: a power premium that goes to the provincial budget, property tax at an industrial rate (UBCM resolution NR68), and no sales tax exemptions.
