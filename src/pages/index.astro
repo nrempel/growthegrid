@@ -133,13 +133,14 @@ const bars = [
             <p class="opp-why"><strong>The ask:</strong> replace today’s cap with four terms. A data centre brings more new power than it uses, sets aside space for Canadian computing, protects BC’s water, and pays BC its share.</p>
             <p class="opp-why"><strong>Why now:</strong> the new government can do all of this without a new law. Cabinet sets the data centre power rules, BC Hydro’s profit target and the property tax classes by regulation. BC Hydro will pick which projects get power once the new government is in place. <span class="srcs"><a href={U.reg} target="_blank" rel="noopener">B.C. Reg. 8/2026</a> <a href={U.classes} target="_blank" rel="noopener">B.C. Reg. 438/81</a> <a href={U.cfd} target="_blank" rel="noopener">BC Hydro</a> <a href={U.direction8} target="_blank" rel="noopener">B.C. Reg. 24/2019</a></span></p>
           </div>
-          <div class="intro">
+          <div class="intro intro-term">
             <div><p class="term-tag">Term 1 of 4</p><h2>Bring more power than you use.</h2></div>
-            <div class="section-lede">
-              <p><strong>Today:</strong> a provincial rule lets new data centres share at most 400 MW of BC’s existing power over two years, half of what they asked for. The rest get nothing this round.</p>
-              <p><strong>The ask:</strong> let a data centre connect if it pays for more new power than it uses.</p>
-              <p><strong>Why:</strong> each one then grows the grid instead of using up what’s there, and the extra goes to homes and businesses. <span class="srcs"><a href={U.reg} target="_blank" rel="noopener">B.C. Reg. 8/2026</a> <a href={U.cfd} target="_blank" rel="noopener">BC Hydro</a></span></p>
+            <div class="tay">
+              <div><p class="tay-label">Today</p><p>A provincial rule lets new data centres share at most 400 MW of BC’s existing power, half of what they asked for.</p></div>
+              <div class="tay-ask"><p class="tay-label">The ask</p><p>Let a data centre connect if it pays for more new power than it uses.</p></div>
+              <div><p class="tay-label">Why</p><p>Each one grows the grid instead of using it up, and the extra goes to homes and businesses.</p></div>
             </div>
+            <p class="srcs"><a href={U.reg} target="_blank" rel="noopener">B.C. Reg. 8/2026</a> <a href={U.cfd} target="_blank" rel="noopener">BC Hydro</a></p>
           </div>
 
           <figure class="chart" aria-label="Data centre power in megawatts">
@@ -219,13 +220,14 @@ const bars = [
 
       <section class="proof pillar pillar-ice" id="sovereign">
         <div class="wrap">
-          <div class="intro">
+          <div class="intro intro-term">
             <div><p class="term-tag">Term 2 of 4</p><h2>Keep Canadian data in Canadian hands.</h2></div>
-            <div class="section-lede">
-              <p><strong>Today:</strong> BC Hydro scores applicants partly on how much space they set aside for Canadian-controlled computing, but it keeps their applications confidential.</p>
-              <p><strong>The ask:</strong> every data centre that gets BC power sets aside a share of its space for Canadian-controlled computing, written into its contract and made public.</p>
-              <p><strong>Why:</strong> hospitals, schools, governments and Canadian AI companies get computers close to home that answer to Canadian law. <span class="srcs"><a href={U.rfa} target="_blank" rel="noopener">BC Hydro 2026 request for applications</a></span></p>
+            <div class="tay">
+              <div><p class="tay-label">Today</p><p>BC Hydro scores how much space applicants set aside for Canadian-controlled computing, but keeps their applications confidential.</p></div>
+              <div class="tay-ask"><p class="tay-label">The ask</p><p>Write that share into each power contract and make it public.</p></div>
+              <div><p class="tay-label">Why</p><p>Hospitals, schools and Canadian companies get computing close to home, under Canadian law.</p></div>
             </div>
+            <p class="srcs"><a href={U.rfa} target="_blank" rel="noopener">BC Hydro 2026 request for applications</a></p>
           </div>
 
           <ul class="stats sov">
@@ -253,13 +255,14 @@ const bars = [
 
       <section class="proof pillar" id="water">
         <div class="wrap">
-          <div class="intro">
+          <div class="intro intro-term">
             <div><p class="term-tag">Term 3 of 4</p><h2>Protect BC’s water.</h2></div>
-            <div class="section-lede">
-              <p><strong>Today:</strong> industry needs a provincial licence to draw groundwater or stream water, and BC can cut use in a drought.</p>
-              <p><strong>The ask:</strong> every data centre uses sealed-loop cooling, meters its water and reports it publicly, with limits in a drought.</p>
-              <p><strong>Why:</strong> BC has the water and the newest designs barely use any, so clear rules cost data centres little and protect rivers and wells in dry years. <span class="srcs"><a href={U.groundwater} target="_blank" rel="noopener">Government of BC</a></span></p>
+            <div class="tay">
+              <div><p class="tay-label">Today</p><p>Industry needs a provincial licence to draw groundwater or stream water, and BC can cut use in a drought.</p></div>
+              <div class="tay-ask"><p class="tay-label">The ask</p><p>Require sealed-loop cooling, metered water use and public water reports.</p></div>
+              <div><p class="tay-label">Why</p><p>The newest designs barely use water, so the rules cost little and protect rivers and wells in dry years.</p></div>
             </div>
+            <p class="srcs"><a href={U.groundwater} target="_blank" rel="noopener">Government of BC</a></p>
           </div>
 
           <ul class="stats water">
@@ -287,13 +290,14 @@ const bars = [
 
       <section class="proof pillar-ice" id="tax">
         <div class="wrap">
-          <div class="intro">
+          <div class="intro intro-term">
             <div><p class="term-tag">Term 4 of 4</p><h2>Pay BC its share.</h2></div>
-            <div class="section-lede">
-              <p><strong>Today:</strong> data centres already bid at least 10% above BC Hydro’s standard industrial rate, but BC Hydro’s rates are set to earn a fixed $712 million a year for the province, so the extra doesn’t add to the provincial budget on its own. They can also be taxed as an ordinary business, at a third to a half of the light industry rate in Mackenzie and Prince George.</p>
-              <p><strong>The ask:</strong> data centres pay a premium for BC’s clean power, set by competitive bids, and the premium goes to the provincial budget. They pay property tax at the light industry rate, and get no sales tax exemptions.</p>
-              <p><strong>Why:</strong> BC expects a $13.8 billion deficit this year, and data centres asked for twice the power BC can offer. They can pay more, and none of it has to come from households. <span class="srcs"><a href={U.cfdInfo} target="_blank" rel="noopener">BC Hydro call info session</a> <a href={U.direction8} target="_blank" rel="noopener">B.C. Reg. 24/2019</a> <a href={U.deficit} target="_blank" rel="noopener">BC First Quarterly Report, 2026/27</a> <a href={U.cfd} target="_blank" rel="noopener">BC Hydro</a> <a href={U.mackenzieRates} target="_blank" rel="noopener">Mackenzie tax rates, 2026</a> <a href="https://www.princegeorge.ca/sites/default/files/2026-05/BL9622_ADOPTED.pdf" target="_blank" rel="noopener">Prince George tax rates, 2026</a></span></p>
+            <div class="tay">
+              <div><p class="tay-label">Today</p><p>Data centres already bid 10% above BC Hydro’s standard rate, but a fixed profit target means the extra doesn’t add to the provincial budget. They can also be taxed as an ordinary business, not as industry.</p></div>
+              <div class="tay-ask"><p class="tay-label">The ask</p><p>Charge more for power and send the premium to the provincial budget. Tax data centres like industry, with no sales tax breaks.</p></div>
+              <div><p class="tay-label">Why</p><p>BC faces a $13.8 billion deficit, and data centres asked for twice the power BC can offer. They can pay more, so households don’t have to.</p></div>
             </div>
+            <p class="srcs"><a href={U.cfdInfo} target="_blank" rel="noopener">BC Hydro call info session</a> <a href={U.direction8} target="_blank" rel="noopener">B.C. Reg. 24/2019</a> <a href={U.deficit} target="_blank" rel="noopener">BC First Quarterly Report, 2026/27</a> <a href={U.cfd} target="_blank" rel="noopener">BC Hydro</a> <a href={U.mackenzieRates} target="_blank" rel="noopener">Mackenzie tax rates, 2026</a> <a href="https://www.princegeorge.ca/sites/default/files/2026-05/BL9622_ADOPTED.pdf" target="_blank" rel="noopener">Prince George tax rates, 2026</a></p>
           </div>
 
           <ul class="stats tax">

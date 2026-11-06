@@ -207,9 +207,15 @@ p { max-width: var(--measure); text-wrap: pretty; }
 .intro { margin-bottom: 48px; }
 .term-tag { margin: 0 0 12px; font-size: var(--fs-xs); font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; line-height: 1.2; color: var(--muted); }
 .section-lede { font-size: var(--fs-lg); margin: 24px 0 0; color: var(--fg-2); max-width: 52ch; }
-.section-lede p { margin: 0; }
-.section-lede p + p { margin-top: 12px; }
-.section-lede strong { color: var(--fg); }
+.intro.intro-term { display: block; margin-bottom: var(--block-gap); }
+.intro-term h2 { max-width: 22ch; }
+.tay { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px; margin-top: 40px; }
+.tay p { margin: 0; font-size: var(--fs-lg); line-height: 1.5; color: var(--fg-2); }
+.tay .tay-label { margin: 0 0 8px; font-size: var(--fs-xs); font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; line-height: 1.2; color: var(--muted); }
+.tay-ask .tay-label { color: var(--num); }
+.tay-ask p:last-child { color: var(--fg); font-weight: 600; }
+.intro-term > .srcs { margin-top: 16px; }
+@media (max-width: 860px) { .tay { grid-template-columns: 1fr; gap: 24px; margin-top: 28px; } }
 @media (min-width: 1000px) {
   .intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 88px); align-items: end; }
   .intro .section-lede { margin: 0; }
