@@ -241,7 +241,8 @@ p { max-width: var(--measure); text-wrap: pretty; }
 }
 .rules { list-style: none; padding: 0; margin: var(--block-gap) 0 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; }
 .rules > li:last-child { grid-column: 1 / -1; }
-@media (max-width: 860px) { .stats, .rules { grid-template-columns: 1fr; } }
+.stats.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 860px) { .stats, .stats.two, .rules { grid-template-columns: 1fr; } }
 
 /* ---------- sources: one style everywhere ---------- */
 .srcs { display: block; max-width: none; margin: 4px 0 0; font-size: var(--fs-xs); font-weight: 400; letter-spacing: 0; color: var(--muted); }
